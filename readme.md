@@ -71,3 +71,14 @@ Nela, o usuário poderá:
 
 As funcionalidades podem ser alteradas ou adicionadas conforme o projeto
 for sendo desenvolvido e conforme as orientações do professor.
+
+Cauan - Desenvolvedor BackEnd
+
+Responsável pelo desenvolvimento BackEnd utilizando JavaScript, BrModelo e MySQL. Apoio na integração FrontEnd-Backend. Code review e apoio nas decisões do projeto.
+Funções:
+•	Desenvolvimento de funcionalidades do backend em JavaScript;
+•	Apoio na integração entre frontend e backend;
+•   Desenvolvimento de funcionalidade backend em BrModelo e MySQL;
+•	Desenvolvimento de serviços necessários para o funcionamento do sistema;
+•	Code Review;
+•	Apoio nas decisões relacionadas ao backend.
