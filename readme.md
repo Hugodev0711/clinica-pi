@@ -77,38 +77,53 @@ for sendo desenvolvido e conforme as orientações do professor.
 Hugo — Líder Técnico e Desenvolvedor Backend Java
 Responsável principalmente pela organização técnica do projeto e pelo desenvolvimento do backend.
 Funções:
-•	Definição da estrutura do backend;
-•	Desenvolvimento da API principal em Java;
-•	Code Review;
-•	Organização e acompanhamento do desenvolvimento no GitHub;
-•	Apoio aos demais membros da equipe;
-•	Integração entre frontend e backend;
-•	Auxílio na definição da arquitetura e das decisões técnicas do projeto.
+    •	Definição da estrutura do backend;
+    •	Desenvolvimento da API principal em Java;
+    •	Code Review;
+    •	Organização e acompanhamento do desenvolvimento no GitHub;
+    •	Apoio aos demais membros da equipe;
+    •	Integração entre frontend e backend;
+    •	Auxílio na definição da arquitetura e das decisões técnicas do projeto.
 Como líder técnico, também será responsável por ajudar a equipe a manter uma organização durante o desenvolvimento e garantir que as diferentes partes do projeto consigam trabalhar juntas.
 
 Roberto — Desenvolvedor Frontend
 Responsável pelo desenvolvimento da parte visual e pela interação das telas com o sistema.
 Funções:
-•	Desenvolvimento do frontend;
-•	Definição da estrutura das páginas;
-•	Implementação das funcionalidades nas telas;
-•	Integração das telas com o backend;
-•	Apoio na definição da interface junto ao designer.
+    •	Desenvolvimento do frontend;
+    •	Definição da estrutura das páginas;
+    •	Implementação das funcionalidades nas telas;
+    •	Integração das telas com o backend;
+    •	Apoio na definição da interface junto ao designer.
 
 Cauan — Desenvolvedor Backend JavaScript
 Responsável pelo desenvolvimento de funcionalidades do backend utilizando JavaScript e pelo apoio na integração do sistema.
 Funções:
-•	Desenvolvimento de funcionalidades do backend em JavaScript;
-•	Apoio na integração entre frontend e backend;
-•	Desenvolvimento de serviços necessários para o funcionamento do sistema;
-•	Code Review;
-•	Apoio nas decisões relacionadas ao backend.
+    •	Desenvolvimento de funcionalidades do backend em JavaScript;
+    •	Apoio na integração entre frontend e backend;
+    •	Desenvolvimento de serviços necessários para o funcionamento do sistema;
+    •	Code Review;
+    •	Apoio nas decisões relacionadas ao backend.
 
 Paulo Henrique — Designer de Interface
 Responsável pela criação e organização visual das interfaces do sistema.
 Funções:
-•	Criação dos protótipos das telas;
-•	Desenvolvimento da identidade visual do sistema;
-•	Criação das interfaces utilizando Figma ou outra ferramenta definida pela equipe;
-•	Definição de elementos visuais, como cores, fontes, botões e organização das telas;
-•	Apoio ao desenvolvedor frontend durante a implementação das interfaces.
+    •	Criação dos protótipos das telas;
+    •	Desenvolvimento da identidade visual do sistema;
+    •	Criação das interfaces utilizando Figma ou outra ferramenta definida pela equipe;
+    •	Definição de elementos visuais, como cores, fontes, botões e organização das telas;
+    •	Apoio ao desenvolvedor frontend durante a implementação das interfaces.
+
+4. Tecnologias inicialmente previstas
+
+As tecnologias abaixo são apenas uma previsão inicial e poderão ser alteradas de acordo com as orientações do professor e com as necessidades do projeto.
+    •	Backend: Java e JavaScript;
+    •	Frontend: HTML e CSS;
+    •	Controle de versão: Git/GitHub;
+    •	Banco de dados: SQL
+    •	Design: Figma.
+A definição final das tecnologias e ferramentas será realizada após as orientações do professor sobre o desenvolvimento do projeto.
+
+5. Observação
+
+Este documento representa apenas o planejamento inicial do projeto. Funcionalidades, tecnologias, divisão de tarefas e responsabilidades poderão ser alteradas conforme o projeto avançar e novas orientações forem apresentadas pelo professor.
+O objetivo neste momento é alinhar a ideia entre os integrantes e deixar claro o papel inicial de cada membro da equipe.
