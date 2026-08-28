@@ -63,8 +63,8 @@ Tela não logada
 Será utilizada pelo
 usuário enquanto ainda não realizou o login.
 
-Nela, o usuário
-poderá:
+Nela, o usuário poderá:
+
     Realizar seu cadastro;    
     Visualizar os serviços/procedimentos disponíveis;      
     Visualizar unidades disponíveis;
