@@ -72,13 +72,42 @@ Nela, o usuário poderá:
 As funcionalidades podem ser alteradas ou adicionadas conforme o projeto
 for sendo desenvolvido e conforme as orientações do professor.
 
-Cauan - Desenvolvedor BackEnd
+3. Funções de cada membro
+Hugo — Líder Técnico e Desenvolvedor Backend Java
+Responsável principalmente pela organização técnica do projeto e pelo desenvolvimento do backend.
+Funções:
+•	Definição da estrutura do backend;
+•	Desenvolvimento da API principal em Java;
+•	Code Review;
+•	Organização e acompanhamento do desenvolvimento no GitHub;
+•	Apoio aos demais membros da equipe;
+•	Integração entre frontend e backend;
+•	Auxílio na definição da arquitetura e das decisões técnicas do projeto.
+Como líder técnico, também será responsável por ajudar a equipe a manter uma organização durante o desenvolvimento e garantir que as diferentes partes do projeto consigam trabalhar juntas.
 
-Responsável pelo desenvolvimento BackEnd utilizando JavaScript, BrModelo e MySQL. Apoio na integração FrontEnd-Backend. Code review e apoio nas decisões do projeto.
+Roberto — Desenvolvedor Frontend
+Responsável pelo desenvolvimento da parte visual e pela interação das telas com o sistema.
+Funções:
+•	Desenvolvimento do frontend;
+•	Definição da estrutura das páginas;
+•	Implementação das funcionalidades nas telas;
+•	Integração das telas com o backend;
+•	Apoio na definição da interface junto ao designer.
+
+Cauan — Desenvolvedor Backend JavaScript
+Responsável pelo desenvolvimento de funcionalidades do backend utilizando JavaScript e pelo apoio na integração do sistema.
 Funções:
 •	Desenvolvimento de funcionalidades do backend em JavaScript;
 •	Apoio na integração entre frontend e backend;
-•   Desenvolvimento de funcionalidade backend em BrModelo e MySQL;
 •	Desenvolvimento de serviços necessários para o funcionamento do sistema;
 •	Code Review;
 •	Apoio nas decisões relacionadas ao backend.
+
+Paulo Henrique — Designer de Interface
+Responsável pela criação e organização visual das interfaces do sistema.
+Funções:
+•	Criação dos protótipos das telas;
+•	Desenvolvimento da identidade visual do sistema;
+•	Criação das interfaces utilizando Figma ou outra ferramenta definida pela equipe;
+•	Definição de elementos visuais, como cores, fontes, botões e organização das telas;
+•	Apoio ao desenvolvedor frontend durante a implementação das interfaces.
