@@ -73,6 +73,7 @@ As funcionalidades podem ser alteradas ou adicionadas conforme o projeto
 for sendo desenvolvido e conforme as orientações do professor.
 
 3. Funções de cada membro
+
 Hugo — Líder Técnico e Desenvolvedor Backend Java
 Responsável principalmente pela organização técnica do projeto e pelo desenvolvimento do backend.
 Funções:
