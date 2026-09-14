@@ -10,6 +10,7 @@ Paulo Henrique Dornelas
 
 1. Ideia do Projeto
 A ideia inicial do projet é desenvolver um sistema para gerenciar uma clínica médica.
+Siga o link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
 
 O sistema terá como objetivo facilitar o gerenciamento de clientes, procedimentos e agendamentos, contando inicialmente com as seguintes funcionalidades:
 
