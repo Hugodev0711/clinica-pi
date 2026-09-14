@@ -10,7 +10,6 @@ Paulo Henrique Dornelas
 
 1. Ideia do Projeto
 A ideia inicial do projet é desenvolver um sistema para gerenciar uma clínica médica.
-Siga o link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
 
 O sistema terá como objetivo facilitar o gerenciamento de clientes, procedimentos e agendamentos, contando inicialmente com as seguintes funcionalidades:
 
@@ -135,3 +134,7 @@ A definição final das tecnologias e ferramentas será realizada após as orien
 
 Este documento representa apenas o planejamento inicial do projeto. Funcionalidades, tecnologias, divisão de tarefas e responsabilidades poderão ser alteradas conforme o projeto avançar e novas orientações forem apresentadas pelo professor.
 O objetivo neste momento é alinhar a ideia entre os integrantes e deixar claro o papel inicial de cada membro da equipe.
+
+6. Protótipo Figma
+Protótipo do design, desenvolvido no Figma, Paulo Henrique Dornelas, 14/09/26.
+Segue link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
