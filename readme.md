@@ -135,6 +135,9 @@ A definição final das tecnologias e ferramentas será realizada após as orien
 Este documento representa apenas o planejamento inicial do projeto. Funcionalidades, tecnologias, divisão de tarefas e responsabilidades poderão ser alteradas conforme o projeto avançar e novas orientações forem apresentadas pelo professor.
 O objetivo neste momento é alinhar a ideia entre os integrantes e deixar claro o papel inicial de cada membro da equipe.
 
-6. Protótipo Figma
-Protótipo do design, desenvolvido no Figma, Paulo Henrique Dornelas, 14/09/26.
+6. Banco conceitual
+<img width="1364" height="675" alt="image" src="https://github.com/user-attachments/assets/1ef990b5-9417-437e-b8ae-e05491600740" />
+
+7. Protótipo Figma
+<img width="1441" height="951" alt="image" src="https://github.com/user-attachments/assets/bae34a00-8c17-441f-acf4-367634c9a1b9" />
 Segue link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
