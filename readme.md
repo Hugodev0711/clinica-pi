@@ -141,3 +141,16 @@ O objetivo neste momento é alinhar a ideia entre os integrantes e deixar claro 
 7. Protótipo Figma
 <img width="1441" height="951" alt="image" src="https://github.com/user-attachments/assets/bae34a00-8c17-441f-acf4-367634c9a1b9" />
 Segue link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
+<img width="1428" height="887" alt="image" src="https://github.com/user-attachments/assets/bfa46c87-e8c0-4777-910d-a788cd8bf222" />
+<img width="1430" height="949" alt="image" src="https://github.com/user-attachments/assets/48998c98-7c87-4086-ab6f-4013ca029633" />
+<img width="1432" height="793" alt="image" src="https://github.com/user-attachments/assets/6ba4efb9-2fcd-42ba-9ac6-9ed05b284136" />
+<img width="1431" height="944" alt="image" src="https://github.com/user-attachments/assets/934dd263-deca-4534-86d2-d9e91007e26c" />
+<img width="1425" height="945" alt="image" src="https://github.com/user-attachments/assets/6f009d09-d005-46d4-97a7-2bc8b7c03c3a" />
+<img width="1431" height="795" alt="image" src="https://github.com/user-attachments/assets/4917f153-bcb8-4db3-a799-364b55e2cbe7" />
+
+
+
+
+
+
+
