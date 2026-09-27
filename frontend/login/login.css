@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: white;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.logo {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.cadeado {
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    height: 570px
+}
+
+.login-container {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.login-container h3 {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+form button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #df0e0e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #A9198D;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+form + a {
+    width: 300px;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+form + a:hover {
+    background-color: #b3b7bb;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}

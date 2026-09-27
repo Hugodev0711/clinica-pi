@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <a href="../inicial/inicial.html"><img class="seta" src="../imagens/seta.svg" alt="Seta">Voltar para o site</a>
+        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <div>
+        <img class="cadeado" src="../imagens/cadeado.svg" alt="Cadeado"><span>Ambiente 100% Seguro
+        </span></div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h3>Entrar com e-mail e senha</h3>
+            <form action="" method="POST">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required>
+
+                <button type="submit" onclick="return validateForm();">Entrar</button>
+
+            </form>
+            <a href="../cadastrar/cadastrar.html">Cadastrar-se</a>
+        </div>
+    </main>
+
+</body>
+</html>

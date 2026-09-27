@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="inicial.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <input type="text" placeholder="Busque em todo site...">
+        <div class="login">
+            <a href="../login/login.html"><img src="../imagens/login.svg" alt="Login">
+            <span>Login</span>
+            </a>
+        </div>
+        <button class="headerbutton1" onclick="Resultado">Resultado de Exames</button>
+        <button class="headerbutton2" onclick="Agendamento">Agendamento de Exames</button>
+    </header>
+
+    <nav>
+        <div class="barra">
+            <a href="">Para Você</a>
+            <a href="">Para Médicos</a>
+            <a href="">Unidades</a>
+            <a href="">Convênios</a>
+            <a href="">Notícias</a>
+            <a href="">Fale Conosco</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../imagens/img1.png" alt="Imagem 1"></div>
+                <div class="swiper-slide"><img src="../imagens/img2.png" alt="Imagem 2"></div>
+                <div class="swiper-slide"><img src="../imagens/img3.png" alt="Imagem 3"></div>
+            </div>
+    
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <p class="p1" ><span class="vermelha">Clínica:</span> Tudo em um único lugar</p>
+        <p class="p2">Especialidades <span class="vermelha">mais procuradas</span></p>
+        <div class="especialidades">
+            <a href="">Cardiologia</a>
+            <a href="">Endocrinologia</a>
+            <a href="">Hematologia</a>
+            <a href="">Gastroenterologia</a>
+            <a href="">Cirurgia Geral</a>
+            <a href="">Neurologia</a>
+            <a href="">Ortopedia</a>
+            <a href="">Dermatologia</a>
+        </div>
+        <div class="linha">
+            <div class="elementos">
+                <img src="" alt="Pix">
+                <div class="elementos-texto">
+                    <p>5% OFF NO PIX</p>
+                    <p>Desconto no pagamento antecipado</p>
+                </div>
+                </div>
+            <div class="elementos">
+                <img src="" alt="Cartão">
+                <div class="elementos-texto">
+                    <p>10X SEM JUROS</p>
+                    <p>Para compras a partir de R$ 500,00</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <img src="" alt="Desconto">
+                <div class="elementos-texto">
+                    <p>DESCONTOS ESPECIAIS</p>
+                    <p>Planos e pacotes promocionais</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <img src="" alt="Atendimento">
+                <div class="elementos-texto">
+                    <p>ATENDIMENTO PERSONALIZADO</p>
+                    <p>Agendamento sem burocracia</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-bloco">
+            <div class="footer-colunas">
+                <img src="../imagens/logo.novo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-colunas">
+                <h3>Serviços</h3>
+                <a href="">Agendar consulta</a>
+                <a href="">Agendar exame</a>
+                <a href="">Cirurgias</a>
+                <a href="">Emitir NFs</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Pacientes</h3>
+                <a href="">Login</a>
+                <a href="">Resultado de exames</a>
+                <a href="">Preparo de exames</a>
+                <a href="">Ouvidoria</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Clínica</h3>
+                <a href="">Unidades</a>
+                <a href="">Sobre nós</a>
+                <a href="">Portal de Privacidade</a>
+                <a href="">Trabalhe conosco</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Fale Conosco</h3>
+                <p>WhatsApp: (11) 91234-5678</p>
+                <p>Segunda a Sexta: 7h às 20h</p>
+                <p>Sábado: 8h às 18h</p>
+                <p>ou ligue para (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bloco2">
+            <div class="footer-pagamentos">
+                <p>Formas de Pagamento</p>
+                <img src="../imagens/pagamentos.svg" alt="Formas de Pagamento">
+            </div>
+            <div class="footer-selo">
+                <p>Site Seguro</p>
+                <img src="../imagens/selo_security.svg" alt="Site Seguro">
+            </div>
+        </div>
+    </footer>
+
+    <script src="inicial.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+  
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+        cssMode: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+          
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+</body>
+</html>
