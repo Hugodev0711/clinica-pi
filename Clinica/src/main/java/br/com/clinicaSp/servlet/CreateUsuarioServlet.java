@@ -25,7 +25,7 @@ public class CreateUsuarioServlet extends HttpServlet {
         String tipoUsuario = request.getParameter("tipoUsuario");
         String telefone = request.getParameter("telefone");
 
-        Usuario usuario = new Usuario(cpf, nome, LocalDate.parse(dataNascimento), email, senha, TipoUsuario.valueOf(tipoUsuario), senha);
+        Usuario usuario = new Usuario(cpf, nome, LocalDate.parse(dataNascimento), email, senha, TipoUsuario.valueOf(tipoUsuario), telefone);
 
         UsuarioDao usuarioDao = new UsuarioDao();
 
