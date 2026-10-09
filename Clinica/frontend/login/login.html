@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +17,21 @@
     <main>
         <div class="login-container">
             <h3>Entrar com e-mail e senha</h3>
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="return validateForm()">
                 <label for="email">Email</label>
                 <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required>
 
                 <label for="senha">Senha</label>
                 <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required>
 
-                <button type="submit" onclick="return validateForm();">Entrar</button>
+                <button type="submit">Entrar</button>
 
             </form>
             <a href="../cadastrar/cadastrar.html">Cadastrar-se</a>
         </div>
     </main>
+
+    </script src="login.js"><script/>
 
 </body>
 </html>
