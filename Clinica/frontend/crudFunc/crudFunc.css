@@ -194,3 +194,44 @@ header input {
 .excluir {
     background-color: #f5f5f5;
 }
+
+
+.caixa-filtro {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 240px;
+    z-index: 100;
+    box-shadow: 0 3px 10px #0002;
+}
+
+#opcoes-filtro {
+    max-height: 180px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.opcao-filtro {
+    display: block;
+    padding: 5px;
+}
+
+.opcao-filtro input {
+    margin-right: 6px;
+}
+
+th button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+td button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
