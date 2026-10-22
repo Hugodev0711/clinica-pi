@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #b3b7bb;
+}
+
+header input {
+    padding: 12px;
+    font-size: 14px;
+    width: 600px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+
+.logo {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: black;
+}
+
+.login img {
+    width: 30px;
+    height: 30px;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+.barra-lateral {
+    width: 240px;
+    min-height: calc(100vh - 80px);
+    background-color: white;
+    padding: 15px;
+    border-right: 1px solid #b3b7bb;
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.barra a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.barra a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.barra a:hover {
+    color: black;
+    background-color: #d2d7db;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.selecionado {
+    font-weight: bold;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f6f8;
+}
+
+.conteudo h1 {
+    margin-bottom: 30px;
+}
+
+.btn-adicionar {
+    padding: 15px 10px;
+    font-size: 14px;
+    background-color: #df0e0e;
+    color: white;
+    border: 1px solid #df0e0e;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-adicionar:hover {
+    background-color: #A9198D;
+    border: 1px solid #A9198D;
+    transition: 0.5s;
+}
+
+.tabela-unidades {
+    background-color: white;
+    border: 1px solid #b3b7bb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.tabela-unidades table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-unidades th {
+    height: 55px;
+    padding: 10px 18px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 1px solid #d5d9dc;
+}
+
+.tabela-unidades td {
+    height: 62px;
+    padding: 8px 18px;
+    font-size: 17px;
+    border-bottom: 1px solid #d5d9dc;
+}
+
+.status {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.status.ativo {
+    color: #4d966c;
+}
+
+.status.inativo {
+    color: #df0e0e;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acoes img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.btn-acao {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #b3b7bb;
+}
+
+.btn-acao:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #b3b7bb;
+}
+
+.visualizar {
+    background-color: #f5f5f5;
+}
+
+.editar {
+    background-color: #f5f5f5;
+}
+
+.excluir {
+    background-color: #f5f5f5;
+}
+
+
+.caixa-filtro {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 240px;
+    z-index: 100;
+    box-shadow: 0 3px 10px #0002;
+}
+
+#opcoes-filtro {
+    max-height: 180px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.opcao-filtro {
+    display: block;
+    padding: 5px;
+}
+
+.opcao-filtro input {
+    margin-right: 6px;
+}
+
+th button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+td button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
