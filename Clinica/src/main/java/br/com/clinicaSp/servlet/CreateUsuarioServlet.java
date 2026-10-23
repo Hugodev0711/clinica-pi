@@ -31,6 +31,6 @@ public class CreateUsuarioServlet extends HttpServlet {
 
         usuarioDao.criarUsuario(usuario);
 
-        response.sendRedirect("listar-usuarios");
+        response.sendRedirect("/listar-usuarios");
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 public class UsuarioDao {
 
     public void criarUsuario(Usuario usuario){
-        String SQL = "INSERT INTO usuario(cpf, nome, dataNascimento, email, senha, tipo_usuario, telefone) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO usuario(cpf, nome, data_nascimento, email, senha, tipo_usuario, telefone) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try{
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
@@ -58,15 +58,16 @@ public class UsuarioDao {
             List<Usuario> usuarios = new ArrayList<>();
 
             while(rSet.next()){
+                String id = rSet.getString("id_usuario");
                 String nome = rSet.getString("nome");
                 String cpf = rSet.getString("cpf");
-                LocalDate dataNascimento = (rSet.getDate("dataNascimento").toLocalDate());
+                LocalDate dataNascimento = rSet.getDate("data_nascimento").toLocalDate();
                 String email = rSet.getString("email");
                 String senha = rSet.getString("senha");
                 TipoUsuario tipoUsuario = TipoUsuario.valueOf(rSet.getString("tipo_usuario"));
                 String telefone = rSet.getString("telefone");
 
-                Usuario usuario = new Usuario(cpf, nome, dataNascimento, email, senha, tipoUsuario, telefone);
+                Usuario usuario = new Usuario(id,cpf, nome, dataNascimento, email, senha, tipoUsuario, telefone);
 
                 usuarios.add (usuario);
             }

@@ -18,9 +18,9 @@
             <th>Tipo Usuario</th>
             <th>Telefone</th>
         </tr>
-        <c:forEach var="usuario" items="${"${usuarios}"}">
+        <c:forEach var="usuario" items="${usuarios}">
         <tr>
-            <td></td>
+            <td>${usuario.id}</td>
             <td>${usuario.nome}</td>
             <td>${usuario.cpf}</td>
             <td>${usuario.dataNascimento}</td>
