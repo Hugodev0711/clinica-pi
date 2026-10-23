@@ -9,7 +9,7 @@
 <body>
     <header>
         <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
-        <input type="text" id="pesquisa" placeholder="Busque funcionários..." onkeyup="listarFuncionarios()">
+        <input type="text" id="pesquisa" placeholder="Busque unidades..." onkeyup="listarUnidades()">
 
         <a class="login" href="../login/login.html">
             <img src="../imagens/login.svg" alt="Login">
@@ -43,17 +43,16 @@
         <section class="conteudo">
 
             <h1>Gestão de Unidades</h1>
-            <button class="btn-adicionar" onclick="adicionarProcedimento()">Adicionar Unidade</button>
+            <button class="btn-adicionar" onclick="adicionarUnidade()">Adicionar Unidade</button>
 
             <div class="tabela-unidades">
             <table>
                 <thead>
                     <tr>
                         <th>Nome <button onclick="abrirFiltro('nome', this)">▼</button></th>
-                        <th>Endereço <button onclick="abrirFiltro('cargo', this)">▼</button></th>
-                        <th>Telefone <button onclick="abrirFiltro('especialidade', this)">▼</button></th>
-                        <th>Horário <button onclick="abrirFiltro('especialidade', this)">▼</button></th>
-                        <th>Status <button onclick="abrirFiltro('status', this)">▼</button></th>
+                        <th>Endereço <button onclick="abrirFiltro('endereco', this)">▼</button></th>
+                        <th>Telefone <button onclick="abrirFiltro('telefone', this)">▼</button></th>
+                        <th>Horário <button onclick="abrirFiltro('horario', this)">▼</button></th>
                         <th>Ações</th>
                     </tr>
                 </thead>

@@ -9,7 +9,7 @@
 <body>
     <header>
         <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
-        <input type="text" id="pesquisa" placeholder="Busque funcionários..." onkeyup="listarFuncionarios()">
+        <input type="text" id="pesquisa" placeholder="Busque procedimentos..." onkeyup="listarProcedimentos()">
 
         <a class="login" href="../login/login.html">
             <img src="../imagens/login.svg" alt="Login">
@@ -43,7 +43,7 @@
         <section class="conteudo">
 
             <h1>Gestão de Procedimentos</h1>
-            <button class="btn-adicionar" onclick="adicionarFuncionario()">Adicionar Procedimento</button>
+            <button class="btn-adicionar" onclick="adicionarProcedimento()">Adicionar Procedimento</button>
 
             <div class="tabela-procedimentos">
             <table>
@@ -51,8 +51,8 @@
                     <tr>
                         <th>ID <button onclick="abrirFiltro('id', this)">▼</button></th>
                         <th>Nome <button onclick="abrirFiltro('nome', this)">▼</button></th>
-                        <th>Duração <button onclick="abrirFiltro('cargo', this)">▼</button></th>
-                        <th>Preço <button onclick="abrirFiltro('especialidade', this)">▼</button></th>
+                        <th>Duração <button onclick="abrirFiltro('duracao', this)">▼</button></th>
+                        <th>Preço <button onclick="abrirFiltro('preco', this)">▼</button></th>
                         <th>Ações</th>
                     </tr>
                 </thead>

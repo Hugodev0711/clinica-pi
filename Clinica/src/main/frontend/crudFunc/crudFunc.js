@@ -29,8 +29,7 @@ function listarFuncionarios() {
 
         let funcionario = funcionarios[i];
 
-        let correspondePesquisa = funcionario.nome
-            .toLowerCase().includes(pesquisa);
+        let correspondePesquisa = funcionario.nome.toLowerCase().includes(pesquisa);
 
         let correspondeFiltros = true;
 
