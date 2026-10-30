@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado de Exames | Clínica SP</title>
+
+  <link rel="stylesheet" href="exames.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="top-row">
+      <a class="logo" href="../inicial/inicial.html" aria-label="Clínica SP - página inicial">
+        <img src="../imagens/logo.novo.png" alt="Clínica SP">
+      </a>
+
+      <form class="busca" role="search" action="#">
+        <input type="search" placeholder="Buscar em todo site..." aria-label="Buscar em todo site">
+      </form>
+
+      <div class="botoes">
+        <a class="entrar" href="../login/login.html">
+          <span>Login</span>
+        </a>
+        <a class="btn btn-contorno" href="exames.html" aria-current="page">Resultado de Exames</a>
+        <a class="btn btn-cheio" href="../agendamento/agendamento.html">Agendamento de Exames</a>
+      </div>
+    </div>
+
+    <nav class="nav-bar" aria-label="Menu principal"></nav>
+  </header>
+
+  <section class="titulo-pagina">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="../inicial/inicial.html">Início</a> / <span>Resultado de Exames</span>
+    </nav>
+    <h1>Resultado de Exames</h1>
+  </section>
+
+  <main class="conteudo">
+    <form class="card" id="form-exames" action="#" method="post">
+      <p class="card-descricao">Consulte seus resultados de forma rápida e segura</p>
+
+      <div class="campo">
+        <label for="cpf">CPF do paciente</label>
+        <input type="text" id="cpf" name="cpf" placeholder="Digite o CPF"
+               inputmode="numeric" maxlength="14" autocomplete="off" required>
+      </div>
+
+      <div class="campo">
+        <label for="protocolo">Nº do protocolo / pedido</label>
+        <input type="text" id="protocolo" name="protocolo" placeholder="Digite o número do protocolo"
+               inputmode="numeric" autocomplete="off" required>
+      </div>
+
+      <div class="campo">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="text" id="nascimento" name="nascimento" placeholder="DD/MM/AAAA"
+               inputmode="numeric" maxlength="10" autocomplete="off" required>
+      </div>
+
+      <button type="submit" class="btn-buscar">Buscar Resultado</button>
+
+      <p class="card-rodape">Dúvidas? Fale conosco pelo WhatsApp (11) 91234-5678</p>
+    </form>
+  </main>
+
+  <script>
+   
+    const cpf = document.getElementById('cpf');
+    cpf.addEventListener('input', () => {
+      const d = cpf.value.replace(/\D/g, '').slice(0, 11);
+      cpf.value = d
+        .replace(/(\d{3})(\d)/, '$1.$2')
+        .replace(/(\d{3})(\d)/, '$1.$2')
+        .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    });
+
+  
+    const nascimento = document.getElementById('nascimento');
+    nascimento.addEventListener('input', () => {
+      const d = nascimento.value.replace(/\D/g, '').slice(0, 8);
+      nascimento.value = d
+        .replace(/(\d{2})(\d)/, '$1/$2')
+        .replace(/(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
+    });
+
+   
+    document.getElementById('form-exames').addEventListener('submit', (e) => {
+      e.preventDefault();
+    
+    });
+  </script>
+
+</body>
+</html>

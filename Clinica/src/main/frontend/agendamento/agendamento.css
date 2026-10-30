@@ -1,0 +1,88 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 79px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo img {
+    width: 120;
+  height: 80px;
+  object-fit: contain;
+}
+.card-agendamento {
+  max-width: 600px;
+  padding: 36px 40px;
+  gap: 18px;
+}
+
+
+.linha {
+  display: flex;
+  gap: 16px;
+}
+
+.linha .campo {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+
+.campo select {
+  width: 100%;
+  padding: 11px 14px;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--texto);
+}
+
+
+.campo select:invalid {
+  color: var(--placeholder);
+}
+
+.campo select option {
+  color: var(--texto);
+}
+
+.campo select:focus {
+  outline: 0;
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 3px rgba(186, 23, 38, 0.15);
+}
+
+
+.btn-confirmar {
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-radius: 22px;
+  background: var(--vermelho);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-confirmar:hover {
+  background: #9c1320;
+}
+
+
+@media (max-width: 520px) {
+  .card-agendamento {
+    padding: 24px;
+  }
+
+  .linha {
+    flex-direction: column;
+  }
+}
