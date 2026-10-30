@@ -1,14 +1,16 @@
 package br.com.clinicaSp.model;
 
 public class Cliente {
-    private int idCliente;
+    private String idCliente;
     private Usuario usuario;
 
-    public Cliente(int idCliente, Usuario usuario) {
+    public Cliente(Usuario usuario) {}
+
+    public Cliente(String idCliente, Usuario usuario) {
         this.idCliente = idCliente;
         this.usuario = usuario;
     }
 
-    public int getIdCliente() {return idCliente;}
-    public void getUsuario(Usuario usuario) {this.usuario = usuario;}
+    public String getIdCliente() {return idCliente;}
+    public Usuario getUsuario() {return usuario;}
 }

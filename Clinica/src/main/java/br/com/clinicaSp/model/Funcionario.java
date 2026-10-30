@@ -1,13 +1,13 @@
 package br.com.clinicaSp.model;
 
 public class Funcionario {
-    private int idFuncionario;
+    private String idFuncionario;
     private Usuario usuario;
     private String especialidade;
     private String cargo;
     private double salario;
 
-    public Funcionario(int idFuncionario, Usuario usuario, String especialidade, String cargo, double salario) {
+    public Funcionario(String idFuncionario, Usuario usuario, String especialidade, String cargo, double salario) {
         this.idFuncionario = idFuncionario;
         this.usuario = usuario;
         this.especialidade = especialidade;
@@ -15,7 +15,7 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public int getIdFuncionario() {return idFuncionario;}
+    public String getIdFuncionario() {return idFuncionario;}
 
     public Usuario getUsuario() {return usuario;}
 

@@ -7,10 +7,10 @@ CREATE TABLE IF NOT EXISTS usuario(
 	id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     cpf VARCHAR(11) NOT NULL UNIQUE,
     nome varchar(50) NOT NULL,
-    idade INT NOT NULL,
+    data_nascimento DATE NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(50) NOT NULL,
-    tipo_usuario VARCHAR(15) NOT NULL DEFAULT "CLIENTE",
+    tipo_usuario VARCHAR(15) NOT NULL,
     telefone VARCHAR(20) NOT NULL UNIQUE
 );
 
@@ -49,13 +49,13 @@ CREATE TABLE IF NOT EXISTS procedimento(
 );
 
 CREATE TABLE IF NOT EXISTS vagas(
+    id_vaga INT PRIMARY KEY AUTO_INCREMENT,
 	hora TIME NOT NULL,
     data_vaga DATE NOT NULL,
     id_procedimento INT,
     id_unidade INT,
     CONSTRAINT fk_procedimentoVag FOREIGN KEY (id_procedimento) REFERENCES procedimento (id_procedimento),
-    CONSTRAINT fk_unidadeVag FOREIGN KEY (id_unidade) REFERENCES procedimento (id_procedimento)
-    
+    CONSTRAINT fk_unidadeVag FOREIGN KEY (id_unidade) REFERENCES unidade (id_unidade)
 );
 
 CREATE TABLE IF NOT EXISTS agendamentos(

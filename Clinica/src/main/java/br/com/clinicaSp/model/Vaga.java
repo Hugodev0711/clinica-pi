@@ -4,13 +4,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Vaga {
-    private int idVaga;
+    private String idVaga;
     private LocalDate dataVaga;
     private LocalTime horaVaga;
     private Procedimento procedimento;
     private Unidade unidade;
 
-    public Vaga(int idVaga, LocalDate dataVaga, LocalTime horaVaga, Procedimento procedimento, Unidade unidade) {
+    public Vaga(String idVaga, LocalDate dataVaga, LocalTime horaVaga, Procedimento procedimento, Unidade unidade) {
         this.idVaga = idVaga;
         this.dataVaga = dataVaga;
         this.horaVaga = horaVaga;
@@ -18,7 +18,7 @@ public class Vaga {
         this.unidade = unidade;
     }
 
-    public int getIdVaga() {return idVaga;}
+    public String getIdVaga() {return idVaga;}
 
     public LocalDate getDataVaga() {return dataVaga;}
     public void setDataVaga(LocalDate dataVaga) {this.dataVaga = dataVaga;}
