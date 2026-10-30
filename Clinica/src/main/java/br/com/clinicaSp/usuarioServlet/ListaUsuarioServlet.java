@@ -1,4 +1,4 @@
-package br.com.clinicaSp.servlet;
+package br.com.clinicaSp.usuarioServlet;
 
 import br.com.clinicaSp.dao.UsuarioDao;
 import br.com.clinicaSp.model.Usuario;

@@ -3,14 +3,14 @@ package br.com.clinicaSp.model;
 import java.time.Duration;
 
 public class Procedimento {
-    private int idProcedimento;
+    private String idProcedimento;
     private Duration duracao;
     private String nomeProcedimento;
     private double preco;
     private Unidade unidade;
     private Funcionario funcionario;
 
-    public Procedimento(int idProcedimento, Duration duracao, String nomeProcedimento, double preco, Unidade unidade, Funcionario funcionario) {
+    public Procedimento(String idProcedimento, Duration duracao, String nomeProcedimento, double preco, Unidade unidade, Funcionario funcionario) {
         this.idProcedimento = idProcedimento;
         this.duracao = duracao;
         this.nomeProcedimento = nomeProcedimento;
@@ -27,7 +27,7 @@ public class Procedimento {
         this.funcionario = funcionario;
     }
 
-    public int getIdProcedimento() {return idProcedimento;}
+    public String getIdProcedimento() {return idProcedimento;}
 
     public Duration getDuracao() {return duracao;}
     public void setDuracao(Duration duracao) {this.duracao = duracao;}

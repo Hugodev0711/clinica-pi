@@ -1,5 +1,6 @@
 package br.com.clinicaSp.dao;
 
+import br.com.clinicaSp.config.ConnectionPoolConfig;
 import br.com.clinicaSp.model.TipoUsuario;
 import br.com.clinicaSp.model.Usuario;
 
@@ -17,9 +18,7 @@ public class UsuarioDao {
         String SQL = "INSERT INTO usuario(cpf, nome, data_nascimento, email, senha, tipo_usuario, telefone) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try{
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
-
-            System.out.println("Sucesso ao conectar");
+            Connection con = ConnectionPoolConfig.getConnection();
 
             PreparedStatement stmt = con.prepareStatement(SQL);
 
@@ -48,9 +47,7 @@ public class UsuarioDao {
         String SQL = "SELECT * FROM usuario";
 
         try {
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("Sucesso ao conectar");
+            Connection con = ConnectionPoolConfig.getConnection();
 
             PreparedStatement stmt = con.prepareStatement(SQL);
             ResultSet rSet = stmt.executeQuery();
@@ -80,6 +77,46 @@ public class UsuarioDao {
         } catch (Exception e) {
             System.out.println(e);
             return null;
+        }
+    }
+
+    public void deletarUsuario(String idUsuario){
+
+        String sql = "DELETE usuario WHERE id_usuario = ?";
+
+        try{
+            Connection con = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, idUsuario);
+            stmt.execute();
+
+            System.out.println("Sucesso ao deletar");
+
+            con.close();
+
+        } catch (Exception e){
+            System.out.println("Falha ao conectar");
+        }
+    }
+
+    public void AtualizarUsuario(Usuario usuario){
+
+        String sql = "UPDATE usuario SET nome = ? WHERE id_usuario = ?";
+
+        try{
+            Connection con = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setString(1, usuario.getNome());
+            stmt.setString(2, usuario.getId());
+            stmt.execute();
+
+            con.close();
+
+        } catch (Exception e){
+            System.out.println("Falha ao conectar");
         }
     }
 }

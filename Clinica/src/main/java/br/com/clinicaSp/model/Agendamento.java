@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Agendamento {
-    private int idAgendamento;
+    private String idAgendamento;
     private Unidade unidade;
     private Procedimento procedimento;
     private Cliente cliente;
@@ -13,7 +13,7 @@ public class Agendamento {
     private LocalTime horaAgendamento;
     private StatusAgendamento statusAgendamento;
 
-    public Agendamento(int idAgendamento, Unidade unidade, Procedimento procedimento, Cliente cliente, Funcionario funcionario, LocalDate dataAgendamento, LocalTime horaAgendamento, StatusAgendamento statusAgendamento) {
+    public Agendamento(String idAgendamento, Unidade unidade, Procedimento procedimento, Cliente cliente, Funcionario funcionario, LocalDate dataAgendamento, LocalTime horaAgendamento, StatusAgendamento statusAgendamento) {
         this.idAgendamento = idAgendamento;
         this.unidade = unidade;
         this.procedimento = procedimento;
@@ -23,7 +23,7 @@ public class Agendamento {
         this.horaAgendamento = horaAgendamento;
         this.statusAgendamento = statusAgendamento;
     }
-    public int getIdAgendamento() {return idAgendamento;}
+    public String getIdAgendamento() {return idAgendamento;}
 
     public Unidade getUnidade() {return unidade;}
     public void setUnidade(Unidade unidade) {this.unidade = unidade;}
