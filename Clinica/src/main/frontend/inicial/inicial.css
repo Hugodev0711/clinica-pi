@@ -4,11 +4,9 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body {
     background-color: white;
 }
-
 header {
     display: flex;
     margin-left: 60px;
@@ -18,7 +16,6 @@ header {
     background-color: white;
     padding: 10px;
 }
-
 header input {
     padding: 12px;
     font-size: 14px;
@@ -28,13 +25,11 @@ header input {
     background-color: #f5f5f5;
     border-radius: 15px;
 }
-
 .logo {
     width: 120px;
     height: 80px;
     object-fit: contain;
 }
-
 .login a{
     display: flex;
     align-items: center;
@@ -42,19 +37,16 @@ header input {
     text-decoration: none;
     color: black;
 }
-
 .login img {
     width: 30px;
     height: 30px;
     object-fit: contain;
 }
-
 .login:hover {
     transform: scale(1.1);
     transition: 0.5s;
     color: #A9198D;
 }
-
 .headerbutton1 {
     padding: 15px 10px;
     font-size: 12px;
@@ -65,7 +57,6 @@ header input {
     border: 1px solid #df0e0e;
     cursor: pointer;
 }
-
 .headerbutton2 {
     padding: 15px 10px;
     font-size: 12px;
@@ -76,19 +67,16 @@ header input {
     border-radius: 15px;
     cursor: pointer;
 }
-
 .headerbutton1:hover {
     color: #A9198D;
     border: 1px solid #A9198D;
     transition: 0.5s;
 }
-
 .headerbutton2:hover {
     background-color: #A9198D;
     border: 1px solid #A9198D;
     transition: 0.5s;
 }
-
 nav {
     display: flex;
     justify-content: center;
@@ -96,7 +84,6 @@ nav {
     padding: 20px;
     text-align: center;
 }
-
 .barra {
     display: flex;
     background-color: white;
@@ -105,9 +92,8 @@ nav {
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 80px;
 }
-
 nav a {
     display: flex;
     padding: 8px 20px;
@@ -116,14 +102,12 @@ nav a {
     text-decoration: none;
     margin: 0 40px;
 }
-
 nav a:hover {
     color: white;
     background-color: #A9198D;
     border-radius: 5px;
     transition: 0.5s;
 }
-
 .banner {
     width: 90%;
     height: 400px;
@@ -131,19 +115,16 @@ nav a:hover {
     overflow: hidden;
     border-radius: 25px;
 }
-
 .banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s;
 }
-
 .swiper {
     width: 100%;
     height: 100%;
 }
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -152,18 +133,15 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-
 main {
     background-color: #f5f5f5;
 }
-
 .p1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 38px;
@@ -171,30 +149,28 @@ main {
     padding: 10px;
     margin-top: 50px;
 }
-
 .p2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 28px;
     text-align: center;
     padding: 10px;
 }
-
 .especialidades {
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
     gap: 20px;
     padding: 50px;
 }
-
 .vermelha {
     color: #df0e0e;
 }
-
 .especialidades a {
     color: #999999;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 30px;
@@ -202,18 +178,11 @@ main {
     text-decoration: none;
     cursor: pointer;
 }
-
 .especialidades a:hover {
     color: white;
     background-color: #A9198D;
     transition: 0.5s;
 }
-
-
-
-
-
-
 .linha {
     display: grid;
     background-color: #e6e6e6;
@@ -222,88 +191,66 @@ main {
     padding: 30px 8%;
     gap: 10px;
 }
-
 .elementos {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .elementos img {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
-
 .elementos-texto {
     display: flex;
     font-size: 12px;
     flex-direction: column;
     gap: 8px;
 }
-
 .elementos p:first-of-type {
     font-weight: bold;
     color: red;
 }
-
-
-
-
-
-
-
-
-
 footer {
     background-color: rgb(255, 255, 255);
     font-family:Arial, sans-serif;
     padding: 50px 10%;
 }
-
 footer h3 {
     font-size: 17px;
     margin-bottom: 10px;
 }
-
 footer p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     color: #444;
 }
-
 .footer-logo {
     width: 110px;
     margin-bottom: 30px;
 }
-
 .footer-bloco {
     display: grid;
     font-family: Arial, Helvetica, sans-serif;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 60px;
 }
-
 .footer-colunas {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
-
 .footer-colunas a {
     color: gray;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
-
 .footer-colunas p {
     color: gray;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
-
 .footer-bloco2 {
     margin-top: 60px;
     display: flex;
@@ -313,22 +260,18 @@ footer p {
     padding-bottom: 40px;
     margin-top: 100px;
 }
-
 .footer-pagamentos {
     display: flex;
     gap: 20px;
 }
-
 .footer-pagamentos p {
     margin-top: 4px;
     font-weight: bold;
 }
-
 .footer-selo {
     display: flex;
     gap: 20px;
 }
-
 .footer-selo p {
     margin-top: 10px;
     font-weight: bold;
