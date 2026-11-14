@@ -3,14 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendamento de Exames | Clínica SP</title>
-
-<link rel="stylesheet" href="agendamento.css">
-
-
-
-  <link rel="stylesheet" href="../exames/exames.css">
-
+  <title>Agendamento de Exames</title>
   <link rel="stylesheet" href="agendamento.css">
 </head>
 <body>
@@ -22,7 +15,6 @@
       </a>
 
       <form class="busca" role="search" action="#">
-    
         <input type="search" placeholder="Buscar em todo site..." aria-label="Buscar em todo site">
       </form>
 
@@ -52,7 +44,6 @@
       <div class="linha">
         <div class="campo">
           <label for="exame">Exame</label>
-          <!-- As opções abaixo são exemplos: troque pelos dados reais (ou carregue do back-end) -->
           <select id="exame" name="exame" required>
             <option value="" disabled selected hidden>Selecione o exame</option>
             <option>Hemograma completo</option>
@@ -122,43 +113,5 @@
       <button type="submit" class="btn-confirmar">Confirmar Agendamento</button>
     </form>
   </main>
-
-  <script>
-    const cpf = document.getElementById('cpf');
-    cpf.addEventListener('input', () => {
-      const d = cpf.value.replace(/\D/g, '').slice(0, 11);
-      cpf.value = d
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    });
-
-    const data = document.getElementById('data');
-    data.addEventListener('input', () => {
-      const d = data.value.replace(/\D/g, '').slice(0, 8);
-      data.value = d
-        .replace(/(\d{2})(\d)/, '$1/$2')
-        .replace(/(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
-    });
-
-    const telefone = document.getElementById('telefone');
-    telefone.addEventListener('input', () => {
-      const d = telefone.value.replace(/\D/g, '').slice(0, 11);
-      let t = d;
-      if (d.length > 10) {
-        t = d.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-      } else if (d.length > 6) {
-        t = d.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-      } else if (d.length > 2) {
-        t = d.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
-      } else if (d.length > 0) {
-        t = '(' + d;
-      }
-      telefone.value = t;
-    });
-
-  
-  </script>
-
 </body>
 </html>

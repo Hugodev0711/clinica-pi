@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header>
-        <a href="../inicial/inicial.html"><img class="seta" src="../imagens/seta.svg" alt="Seta">Voltar para o site</a>
-        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
-        <div>
-        <img class="cadeado" src="../imagens/cadeado.svg" alt="Cadeado"><span>Ambiente 100% Seguro
-        </span></div>
+    <header class="topo">
+        <a href="../inicial/inicial.html" class="topo_voltar"><img class="seta" src="../imagens/seta.svg" alt="Seta">Voltar para o site</a>
+        <img src="../imagens/logo.novo.png" alt="Clínica SP" class="topo_logo">
+        <div class="topo_cadeado">
+            <img src="../imagens/cadeado.svg" alt="Cadeado">
+            <span>Ambiente 100% Seguro</span>
+        </div>
     </header>
     <main>
-        <div class="login-container">
+        <section class="login-container">
             <h3>Entrar com e-mail e senha</h3>
             <form action="" method="POST" onsubmit="return validateForm()">
                 <label for="email">Email</label>
@@ -28,8 +29,48 @@
 
             </form>
             <a href="../cadastro/cadastro.html">Cadastrar-se</a>
-        </div>
+        </section>
     </main>
+    <footer>
+        <div class="footer-bloco">
+            <div class="footer-colunas">
+                <img src="../imagens/logo.novo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-colunas">
+                <h3>Serviços</h3>
+                <a href="">Agendar consulta</a>
+                <a href="">Agendar exame</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Pacientes</h3>
+                <a href="../login/login.html">Login</a>
+                <a href="">Resultado de exames</a>
+                <a href="">Agendamento de exames</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Clínica</h3>
+                <a href="../unidades/unidades.html">Unidades</a>
+                <a href="../sobre-nós/sobre-nós.html">Sobre nós</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Fale Conosco</h3>
+                <p>WhatsApp: (11) 91234-5678</p>
+                <p>Segunda a Sexta: 7h às 20h</p>
+                <p>Sábado: 8h às 18h</p>
+                <p>ou ligue para (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bloco2">
+            <div class="footer-pagamentos">
+                <p>Formas de Pagamento</p>
+                <img src="../imagens/pagamentos.svg" alt="Formas de Pagamento">
+            </div>
+            <div class="footer-selo">
+                <p>Site Seguro</p>
+                <img src="../imagens/selo_security.svg" alt="Site Seguro">
+            </div>
+        </div>
+    </footer>
 
     </script src="login.js"><script/>
 

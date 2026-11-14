@@ -1,97 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resultado de Exames | Clínica SP</title>
-
-  <link rel="stylesheet" href="exames.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="consultas.css">
 </head>
 <body>
+    <header>
+        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <input type="text" placeholder="Busque em todo site...">
+        <div class="login">
+            <a href="../login/login.html"><img src="../imagens/login.svg" alt="Login">
+            <span>Login</span>
+            </a>
+        </div>
+        <button class="headerbutton1" onclick="location.href='../exames/exames.html'">Resultado de Exames</button>
+        <button class="headerbutton2" onclick="location.href='../agendamento/agendamento.html'">Agendamento de Exames</button>
+    </header>
 
-  <header class="header">
-    <div class="top-row">
-      <a class="logo" href="../inicial/inicial.html" aria-label="Clínica SP - página inicial">
-        <img src="../imagens/logo.novo.png" alt="Clínica SP">
-      </a>
-
-      <form class="busca" role="search" action="#">
-        <input type="search" placeholder="Buscar em todo site..." aria-label="Buscar em todo site">
-      </form>
-
-      <div class="botoes">
-        <a class="entrar" href="../login/login.html">
-          <span>Login</span>
-        </a>
-        <a class="btn btn-contorno" href="exames.html" aria-current="page">Resultado de Exames</a>
-        <a class="btn btn-cheio" href="../agendamento/agendamento.html">Agendamento de Exames</a>
-      </div>
-    </div>
-
-    <nav class="nav-bar" aria-label="Menu principal"></nav>
-  </header>
-
-  <section class="titulo-pagina">
-    <nav class="breadcrumb" aria-label="Você está em">
-      <a href="../inicial/inicial.html">Início</a> / <span>Resultado de Exames</span>
+    <nav>
+        <div class="barra">
+            <a class="btn btn-cheio" href="../consultas/consultas.html">Consultas</a>
+            <a href="../exames/exames.html">Exames</a>
+            <a href="../unidades/unidades.html">Unidades</a>
+            <a href="../sobre-nós/sobre-nós.html">Sobre Nós</a>
+        </div>
     </nav>
-    <h1>Resultado de Exames</h1>
-  </section>
+    <div class="barra2">
+        <h2>Conheça nossas unidades</h2>
+    </div>
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <h3>Consulta Gastroenterologia</h3>
+                <p>A Gastroenterologia é a especialidade médica dedicada ao estudo, 
+                    prevenção, diagnóstico e tratamento clínico das doenças que afetam 
+                    o sistema digestório. Ela abrange todo o tubo digestivo (da boca ao 
+                    ânus) e os órgãos anexos responsáveis pela digestão.</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+            <div class="banner-content">
+                <h3>Consulta Ortopedia</h3>
+                <p>A ortopedia é a especialidade médica responsável por diagnosticar, 
+                    tratar, prevenir e reabilitar doenças e lesões que acometem o sistema 
+                    musculoesquelético (composto por ossos, músculos, articulações, 
+                    tendões, ligamentos e nervos).</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+            <div class="banner-content">
+                <h3>Consulta Cardiologia</h3>
+                <p>A Cardiologia é a especialidade médica focada no diagnóstico, tratamento 
+                    e prevenção de doenças que afetam o coração e todo o sistema circulatório 
+                    (artérias, veias e vasos sanguíneos).</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+            <div class="banner-content">
+                <h3>Consulta Dermatologia</h3>
+                <p>A dermatologia é a especialidade médica dedicada ao estudo, prevenção, 
+                    diagnóstico e tratamento de doenças e afecções que acometem a pele, 
+                    cabelos, unhas e mucosas (como boca e região genital). A pele é o maior 
+                    órgão do corpo humano e atua como a primeira barreira de defesa contra 
+                    agentes externos.</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+            <div class="banner-content">
+                <h3>Consulta Cirurgia Geral</h3>
+                <p>A Cirurgia Geral é a especialidade médica focada no diagnóstico e no 
+                    tratamento de doenças que exigem intervenção cirúrgica, atuando como 
+                    o alicerce fundamental para diversas outras subespecialidades da 
+                    medicina.</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+            <div class="banner-content">
+                <h3>Consulta Endocrinologia</h3>
+                <p>A endocrinologia é a especialidade médica que estuda as glândulas 
+                    endócrinas, os hormônios por elas produzidos e a forma como esses 
+                    mensageiros químicos regulam o metabolismo, o crescimento, a 
+                    reprodução e a homeostase do corpo.</p>
+                <a href="../agendamento/agendamento.html">Agendar</a>
+            </div>
+        </section>
 
-  <main class="conteudo">
-    <form class="card" id="form-exames" action="#" method="post">
-      <p class="card-descricao">Consulte seus resultados de forma rápida e segura</p>
-
-      <div class="campo">
-        <label for="cpf">CPF do paciente</label>
-        <input type="text" id="cpf" name="cpf" placeholder="Digite o CPF"
-               inputmode="numeric" maxlength="14" autocomplete="off" required>
-      </div>
-
-      <div class="campo">
-        <label for="protocolo">Nº do protocolo / pedido</label>
-        <input type="text" id="protocolo" name="protocolo" placeholder="Digite o número do protocolo"
-               inputmode="numeric" autocomplete="off" required>
-      </div>
-
-      <div class="campo">
-        <label for="nascimento">Data de nascimento</label>
-        <input type="text" id="nascimento" name="nascimento" placeholder="DD/MM/AAAA"
-               inputmode="numeric" maxlength="10" autocomplete="off" required>
-      </div>
-
-      <button type="submit" class="btn-buscar">Buscar Resultado</button>
-
-      <p class="card-rodape">Dúvidas? Fale conosco pelo WhatsApp (11) 91234-5678</p>
-    </form>
-  </main>
-
-  <script>
-   
-    const cpf = document.getElementById('cpf');
-    cpf.addEventListener('input', () => {
-      const d = cpf.value.replace(/\D/g, '').slice(0, 11);
-      cpf.value = d
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    });
-
-  
-    const nascimento = document.getElementById('nascimento');
-    nascimento.addEventListener('input', () => {
-      const d = nascimento.value.replace(/\D/g, '').slice(0, 8);
-      nascimento.value = d
-        .replace(/(\d{2})(\d)/, '$1/$2')
-        .replace(/(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
-    });
-
-   
-    document.getElementById('form-exames').addEventListener('submit', (e) => {
-      e.preventDefault();
-    
-    });
-  </script>
-
+        <section>
+            <h1>Convênios Aceitos</h1>
+            <p>As principais parcerias para lhe atender melhor.</p>
+            <div class="linha">
+                <div class="elementos">
+                    <img src="../imagens/convBradesco.svg" alt="Bradesco">
+                </div>
+                <div class="elementos">
+                    <img src="../imagens/convCareplus.svg" alt="Careplus">
+                </div>
+                <div class="elementos">
+                    <img src="../imagens/convEconomus.svg" alt="Economus">
+                </div>
+                <div class="elementos">
+                    <img src="../imagens/convItau.svg" alt="Itau">
+                </div>
+                <div class="elementos">
+                    <img src="../imagens/convNotredame.svg" alt="Notredame">
+                </div>
+                <div class="elementos">
+                    <img src="../imagens/convOmint.svg" alt="Omint">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-bloco">
+            <div class="footer-colunas">
+                <img src="../imagens/logo.novo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-colunas">
+                <h3>Serviços</h3>
+                <a href="../consultas/consultas.html">Agendar consulta</a>
+                <a href="../exames/exames.html">Agendar exame</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Pacientes</h3>
+                <a href="../login/login.html">Login</a>
+                <a href="">Resultado de exames</a>
+                <a href="">Agendamento de exames</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Clínica</h3>
+                <a href="../unidades/unidades.html">Unidades</a>
+                <a href="../sobre-nós/sobre-nós.html">Sobre nós</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Fale Conosco</h3>
+                <p>WhatsApp: (11) 91234-5678</p>
+                <p>Segunda a Sexta: 7h às 20h</p>
+                <p>Sábado: 8h às 18h</p>
+                <p>ou ligue para (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bloco2">
+            <div class="footer-pagamentos">
+                <p>Formas de Pagamento</p>
+                <img src="../imagens/pagamentos.svg" alt="Formas de Pagamento">
+            </div>
+            <div class="footer-selo">
+                <p>Site Seguro</p>
+                <img src="../imagens/selo_security.svg" alt="Site Seguro">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,74 +1,56 @@
-:root {
-  --vermelho: #e00d0d;
-  --vermelho-escuro: #b80909;
-  --fundo: #f4f4f4;
-  --branco: #ffffff;
-  --texto: #111111;
-  --borda: #cfcfcf;
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-body {
-  font-family: "DejaVu Sans", Verdana, Arial, sans-serif;
-  background: var(--fundo);
-  color: var(--texto);
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: white;
 }
-
+header a {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+header img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
 .topo {
-  position: sticky;
   top: 0;
-  z-index: 10;
   width: 100%;
   height: 100px;
   padding: 0 clamp(16px, 11vw, 150px);
-  background: var(--branco);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 16px;
 }
-
-.topo__voltar {
-  justify-self: start;
+.topo_voltar {
   font-size: 1.05rem;
-  color: var(--texto);
   text-decoration: none;
-  white-space: nowrap;
 }
-
-.topo__voltar:hover {
-  text-decoration: underline;
-}
-
-.topo__logo {
+.topo_logo {
   height: 80px;
   width: auto;
 }
-
-.topo__seguro {
+.topo_cadeado {
   justify-self: end;
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 1.05rem;
-  white-space: nowrap;
 }
-
-.cadeado {
-  height: 28px;
-  width: auto;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  height: 900px
 }
-
-
 .conteudo {
   flex: 1;
   width: 100%;
@@ -77,77 +59,49 @@ body {
   align-items: flex-start;
   padding: 48px 16px;
 }
-
 .cartao {
-  background: var(--branco);
+  background-color: white;
   width: 100%;
   max-width: 460px;
   border-radius: 24px;
   padding: 36px 50px 40px;
 }
-
-.cartao__titulo {
-  font-size: 1.35rem;
+.cartao h3 {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
-
-
 .formulario {
   display: flex;
   flex-direction: column;
 }
-
 .campo {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   min-width: 0;
 }
-
 .campo label {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-
 .campo input {
   width: 100%;
   height: 38px;
   padding: 0 14px;
   font-family: inherit;
   font-size: 0.85rem;
-  border: 1px solid var(--borda);
-  border-radius: 999px;
-  background: var(--branco);
-  color: var(--texto);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
-
-.campo input::placeholder {
-  color: #777;
-}
-
-.campo input:focus {
-  border-color: var(--vermelho);
-  box-shadow: 0 0 0 3px rgba(224, 13, 13, 0.15);
-}
-
-.campo input:user-invalid {
-  border-color: var(--vermelho);
-}
-
 .campo-duplo {
   display: flex;
   gap: 12px;
 }
-
 .campo-duplo .campo {
   flex: 1;
 }
-
-
 .termos {
   display: flex;
   align-items: flex-start;
@@ -157,87 +111,114 @@ body {
   margin-bottom: 24px;
   cursor: pointer;
 }
-
 .termos input {
-  accent-color: var(--vermelho);
+  accent-color: #df0e0e;
   margin-top: 2px;
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
-
-
 .botao {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 38px;
-  border-radius: 999px;
-  font-family: inherit;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
 }
-
-.botao--principal {
-  background: var(--vermelho);
-  color: var(--branco);
+.botao-principal {
+  padding: 10px;
+  font-weight: bold;
+  background-color: #df0e0e;
+  color: white;
   border: none;
-  margin-bottom: 16px;
 }
-
-.botao--principal:hover {
-  background: var(--vermelho-escuro);
+.botao-principal:hover {
+  background-color: #A9198D;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
 }
-
-.botao--secundario {
-  background: var(--branco);
-  color: var(--texto);
-  border: 1px solid var(--texto);
+.botao-secundario {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
   height: 40px;
 }
-
-.botao--secundario:hover {
-  background: var(--texto);
-  color: var(--branco);
+.botao-secundario:hover {
+  background-color: #b3b7bb;
+  transition: 0.5s;
 }
-
-.botao:focus-visible {
-  outline: 3px solid rgba(224, 13, 13, 0.4);
-  outline-offset: 2px;
+footer {
+    background-color: rgb(255, 255, 255);
+    font-family:Arial, sans-serif;
+    padding: 50px 10%;
+    border-top: 1px solid #ccc;
 }
-
-
-@media (max-width: 700px) {
-  .topo {
-    height: auto;
-    grid-template-columns: 1fr 1fr;
-    padding: 12px 16px;
-    row-gap: 8px;
-  }
-
-  .topo__logo {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    justify-self: center;
-    height: 64px;
-  }
-
-  .topo__voltar,
-  .topo__seguro {
-    grid-row: 2;
-    font-size: 0.85rem;
-  }
-
-  .cartao {
-    padding: 28px 24px 32px;
-  }
-
-  .campo-duplo {
+footer h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+.footer-logo {
+    width: 110px;
+    margin-bottom: 30px;
+}
+.footer-bloco {
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+.footer-colunas {
+    display: flex;
     flex-direction: column;
-    gap: 0;
-  }
+    gap: 16px;
+}
+.footer-colunas a {
+    color: gray;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+.footer-colunas p {
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+.footer-bloco2 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+    margin-top: 100px;
+}
+.footer-pagamentos {
+    display: flex;
+    gap: 20px;
+}
+.footer-pagamentos p {
+    margin-top: 4px;
+    font-weight: bold;
+}
+.footer-selo {
+    display: flex;
+    gap: 20px;
+}
+.footer-selo p {
+    margin-top: 10px;
+    font-weight: bold;
 }
