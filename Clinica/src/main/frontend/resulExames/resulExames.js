@@ -1,10 +1,12 @@
 let form = document.getElementById("form-exames");
-let cpf = document.getElementById("cpf");
-let nascimento = document.getElementById("nascimento");
-let protocolo = document.getElementById("protocolo");
+
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
+
+    let cpf = document.getElementById("cpf");
+    let nascimento = document.getElementById("nascimento");
+    let protocolo = document.getElementById("protocolo");
 
     if(cpf.value.trim() === "") {
         alert("Digite seu CPF");
