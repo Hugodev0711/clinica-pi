@@ -31,4 +31,15 @@ function reset () {
     indice 
 }
 
+function logout() {
+
+    localStorage.removeItem("usuarioLogado");
+    localStorage.removeItem("emailUsuario");
+
+    alert("Logout efetuado com sucesso");
+
+    window.location.href = "../inicial/inicial.html"
+
+}
+
 setInterval(proximo, 8000);

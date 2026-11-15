@@ -276,3 +276,39 @@ footer p {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.usuario-logado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-usuario img {
+    width: 28px;
+    height: 28px;
+}
+
+.info-usuario span {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.usuario-logado button {
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.usuario-logado button:hover {
+    transform: scale(1.05);
+}

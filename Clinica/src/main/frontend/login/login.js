@@ -9,20 +9,27 @@ function validateForm() {
     }
 
     if(!email.includes("@") || !email.includes(".")) {
-        alert("Digite um email válido!");
+        alert("Digite um email válido");
         return false;
     }
 
     if(senha.trim() == "") {
-        alert("Digite sua senha!");
+        alert("Digite sua senha");
         return false;
     }
 
     if(senha.length < 8) {
-        alert("A senha deve ter pelo menos 8 caracteres!");
+        alert("A senha deve ter pelo menos 8 caracteres");
         return false;
     }
 
-    return true;
+    localStorage.setItem("usuarioLogado", "true");
+    localStorage.setItem("emailUsuario", email);
+
+    alert("Login realizado com sucesso")
+
+    window.location.href = "../inicial/inicial.html"
+
+    return false;
 
 }
