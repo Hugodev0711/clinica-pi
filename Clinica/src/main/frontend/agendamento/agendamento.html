@@ -20,38 +20,75 @@
     </header>
     
     <main class="conteudo">
-      <section class="cartao">
+        <section class="cartao">
         <h3 class="titulo">Agendamento de Exames</h3>
         <p class="subtitulo">Escolha o exame, o dia e o horário. Leva menos de um minuto.</p>
-
-        <div class="bloco">
-          <div class="campo">
-            <label for="exame">Exame</label>
-            <select id="exame" name="exame" required>
-              <option value="">Selecione um exame</option>
-              <option value="hemograma">Hemograma completo</option>
-              <option value="glicemia">Glicemia em Jejum</option>
-              <option value="ressonancia">Ressonância magnética de joelho</option>
-              <option value="eletrocardiograma">Eletrocardiograma</option>
-            </select>
-          </div>
-          <div class="campo">
-            <label for="unidade">Unidade</label>
-            <select id="unidade" name="unidade" required>
-              <option value="">Selecione uma unidade</option>
-              <option value="vila-nova">Vila Nova Cachoeirinha</option>
-              <option value="osasco">Osasco</option>
-              <option value="santo-amaro">Santo Amaro</option>
-            </select>
-          </div>
-        </div>
-        <div class="bloco">
-          <div class="campo campo-data">
-            <label for="data">Data</label>
-            <input type="date" id="data" name="data" required>
-          </div>
-        </div>
-      </section>
+            <form>
+                <h4>Exame e Unidade</h4>
+                <div class="bloco">
+                <div class="campo">
+                    <label for="exame">Exame</label>
+                    <select id="exame" name="exame" required>
+                    <option value="">Selecione um exame</option>
+                    <option value="hemograma">Hemograma completo</option>
+                    <option value="glicemia">Glicemia em Jejum</option>
+                    <option value="ressonancia">Ressonância magnética de joelho</option>
+                    <option value="eletrocardiograma">Eletrocardiograma</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="unidade">Unidade</label>
+                    <select id="unidade" name="unidade" required>
+                    <option value="">Selecione uma unidade</option>
+                    <option value="vila-nova">Vila Nova Cachoeirinha</option>
+                    <option value="osasco">Osasco</option>
+                    <option value="santo-amaro">Santo Amaro</option>
+                    </select>
+                </div>
+                </div>
+                <h4>Data e Horário</h4>
+                <div class="bloco">
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="campo">
+                    <label for="horario">Horário</label>
+                    <select id="horario" name="horario" required>
+                    <option value="">Selecione um horário</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    </select>
+                </div>
+                </div>
+                <h4>Informações do Paciente</h4>
+                <div class="bloco">
+                <div class="campo">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                </div>
+                <div class="bloco">
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone com DDD</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone com DDD" required>
+                </div>
+                </div>
+                <button class="botao-principal" type="submit">Agendar</button>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="footer-bloco">
@@ -60,14 +97,13 @@
             </div>
             <div class="footer-colunas">
                 <h3>Serviços</h3>
-                <a href="">Agendar consulta</a>
-                <a href="">Agendar exame</a>
+                <a href="agendamento.html">Agendar consulta</a>
+                <a href="agendamento.html">Agendar exame</a>
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="../login/login.html">Login</a>
-                <a href="">Resultado de exames</a>
-                <a href="">Agendamento de exames</a>
+                <a href="../resulExames/resulExames.html">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
