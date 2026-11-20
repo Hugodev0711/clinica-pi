@@ -93,9 +93,6 @@ form button {
 form button:hover {
     background-color: #A9198D;
     color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
     transition: 0.5s;
 }
 form + a {
@@ -114,10 +111,6 @@ form + a {
 }
 form + a:hover {
     background-color: #b3b7bb;
-    border-radius: 20px;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
     transition: 0.5s;
 }
 footer {

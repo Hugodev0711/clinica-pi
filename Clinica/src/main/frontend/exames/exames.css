@@ -119,7 +119,7 @@ nav a:hover {
 }
 .banner {
     padding: 10px;
-    height:400px;
+    height:260px;
     display:grid;
     grid-template-columns:repeat(6, 220px);
     position:relative;
@@ -131,7 +131,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 380px;
+    height: 220px;
     border-radius: 10px;
     border: 1px solid #ccc;
     padding: 14px;
@@ -142,16 +142,20 @@ h3 {
     margin:14px 0;
     color:black;
 }
+.banner-content h3 + p {
+    margin-top: auto;
+    font-weight: bold;
+}
 p {
     font-size: 13px;
     color: #20242b;
-    margin: 8px 0;
+    margin: 5px 0;
 }
 .banner-content a {
     display: flex;
     font-size: 14px;
     padding: 8px 40px;
-    margin-top: auto;
+    margin-top: 15px;
     align-items: center;
     justify-content: center;
     align-self: center;
