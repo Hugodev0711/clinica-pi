@@ -3,7 +3,7 @@ let cards = document.querySelectorAll(".banner-content");
 
 campoBusca.addEventListener("input", function() {
 
-    let texto = campoBusca.ariaValueMax.toLowerCase();
+    let texto = campoBusca.value.trim().toLowerCase();
 
     cards.forEach(function(card) {
         let conteudo = card.textContent.toLowerCase();

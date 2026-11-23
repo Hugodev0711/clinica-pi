@@ -1,4 +1,4 @@
-let funcionarios = [
+let listarProcedimentos = [
     {
         id: 1,
         nome: "Consulta Clínica",
@@ -34,7 +34,7 @@ function listarProcedimentos() {
 
         let procedimento = procedimentos[i];
 
-        let correspondePesquisa = funcionario.nome.toLowerCase().includes(pesquisa);
+        let correspondePesquisa = procedimento.nome.toLowerCase().includes(pesquisa);
 
         let correspondeFiltros = true;
 
@@ -42,7 +42,7 @@ function listarProcedimentos() {
 
             if(filtros[coluna] != null) {
 
-                let valor = String(funcionario[coluna]);
+                let valor = String(procedimento[coluna]);
 
                 if(!filtros[coluna].includes(valor)) {
                     correspondeFiltros = false;
@@ -81,6 +81,23 @@ function listarProcedimentos() {
     }
 }
 
+function lerPreco(mensagem, valorAtual = "") {
+    let entrada = prompt(mensagem, valorAtual);
+
+    if(entrada === null) {
+        return null;
+    }
+
+    let valor = entrada.trim();
+    let preco = Number(valor.replace(",", "."));
+
+    if(!Number.isFinite(preco) || preco < 0) {
+            alert("Preço invalido");
+            return null;
+        }
+
+        return preco;
+} 
 
 function adicionarProcedimento() {
 
@@ -89,21 +106,14 @@ function adicionarProcedimento() {
         return;
     }
 
-    let cargo = prompt("Duração do Procedimento:");
-    if(cargo == null || cargo.trim() == "") {
+    let duracao = prompt("Duração do Procedimento:");
+    if(duracao == null || duracao.trim() == "") {
         return;
     }
 
-    let especialidade = prompt("Preço do procedimento:");
-    if(especialidade == null || especialidade.trim() == "") {
+    let preco = lerPreco("Preço do procedimento:");
+    if(preco === null) {
         return;
-
-        preco = Number(preco.replace(",", "."));
-
-        if(!Number.isFinite(preco) || preco < 0) {
-            alert("Preço invalido");
-            return;
-        }
     }
 
     let novoProcedimento = {
@@ -136,15 +146,10 @@ function editarProcedimento(id) {
                 return;
             }
 
-            let preco = prompt("Novo Preço:", procedimentos[i].preco);
-            if(preco == null || preco.trim() == "") {
+            let preco = lerPreco("Novo Preço:", procedimentos[i].preco);
+            if(preco === null) {
                 return;
-                preco = Number(preco.replace(",", "."));
-                if(!Number.isFinite(preco) || preco < 0) {
-                    alert("Preço invalido");
-                    return;
-                }
-            }
+            }            
 
             procedimentos[i].nome = nome;
             procedimentos[i].duracao = duracao;

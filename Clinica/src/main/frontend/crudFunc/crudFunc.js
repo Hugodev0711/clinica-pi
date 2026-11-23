@@ -126,8 +126,20 @@ function editarFuncionario(id) {
                 return;
             }
 
+            let especialidade = prompt("Nova especialidade:", funcionarios[i].especialidade);
+            if(especialidade == null || especialidade.trim() == "") {
+                return;
+            }
+
+            let status = prompt("Novo status:", funcionarios[i].status);
+            if(status == null || status.trim() == "") {
+                return;
+            }
+
             funcionarios[i].nome = nome;
             funcionarios[i].cargo = cargo;
+            funcionarios[i].especialidade = especialidade;
+            funcionarios[i].status = status;
 
             listarFuncionarios();
             return;

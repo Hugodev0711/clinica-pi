@@ -1,4 +1,4 @@
-let funcionarios = [
+let unidades = [
     {
         id: 1,
         nome: "Clinica Centro",
@@ -73,14 +73,14 @@ function listarUnidades() {
             editar.textContent = "Editar";
 
             editar.onclick = function() {
-                editarProcedimento(unidade.id);
+                editarUnidade(unidade.id);
             };
 
             let excluir = document.createElement("button");
             excluir.textContent = "Excluir";
 
             excluir.onclick = function() {
-                excluirProcedimento(unidade.id);
+                excluirUnidade(unidade.id);
             };
 
             acoes.appendChild(editar);
@@ -269,7 +269,7 @@ function aplicarFiltro() {
     }
 
     filtros[colunaAtual] = selecionados;
-    listarProcedimentos();
+    listarUnidades();
     fecharFiltro();
 
 }

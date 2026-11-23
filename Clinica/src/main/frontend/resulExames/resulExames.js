@@ -1,28 +1,30 @@
 let form = document.getElementById("form-exames");
+let buscaExame = document.getElementById("busca-exame");
+let filtroStatus = document.getElementById("filtro-status");
+let exames = document.getElementById("lista-exame");
+let semResultado = document.getElementById("sem-resultado");
 
+function filtrarExames() {
+    
+    let busca = buscaExame.value.trim().toLowerCase();
+    let status = filtroStatus.value;
+    let encontrou = false;
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    exames.array.forEach(function(exame) {
+        let nome = exame.querySelector(".exame-nome").textContent.toLowerCase();
 
-    let cpf = document.getElementById("cpf");
-    let nascimento = document.getElementById("nascimento");
-    let protocolo = document.getElementById("protocolo");
+        if(nome.includes(busca) && (status === "" || exame.dataset.status === status)) {
+            exame.style.display = "";
+            encontrou = true;
+        }
+        else {
+            exame.style.display = "none";
+        }
+    });
 
-    if(cpf.value.trim() === "") {
-        alert("Digite seu CPF");
-        return;
-    }
+    semResultado.hidden = encontrou;
+}
 
-    if(nascimento.value.trim() === "") {
-        alert("Digite sua data de nascimento");
-        return;
-    }
-
-    if(protocolo.value.trim() === "") {
-        alert("Digite o numero do protocolo");
-        return;
-    }
-
-    alert("Resultado localizado com sucesso");
-
-});
+buscaExame.addEventListener("input", filtrarExames);
+filtroStatus.addEventListener("change", filtrarExames);
+filtrarExames();

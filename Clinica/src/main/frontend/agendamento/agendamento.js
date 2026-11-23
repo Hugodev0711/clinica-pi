@@ -3,46 +3,16 @@ let form = document.getElementById("form-agendamento");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let nome = document.getElementById("nome").value;
-    let exame = document.getElementById("exame").value;
-    let unidade = document.getElementById("unidade").value;
-    let horario = document.getElementById("horario").value;
-    let cpf = document.getElementById("cpf");
-let telefone = document.getElementById("telefone")
-let data = document.getElementById("data")
+    let nome = form.elements.nome.value.trim();
+    let cpf = form.elements.cpf.value.trim();
+    let telefone = form.elements.telefone.value.trim();
+    let exame = form.elements.exame.value;
+    let unidade = form.elements.unidade.value;
+    let data = form.elements.data.value;
+    let horario = form.elements.horario.value;
 
-    if(nome.trim() === "") {
-        alert("Digite seu nome");
-        return;
-    }
-
-    if(cpf.trim() === "") {
-        alert("Digite seu CPF");
-        return;
-    }
-
-    if(telefone.trim() === "") {
-        alert("Digite seu telefone");
-        return;
-    }
-
-    if(data.value.trim() === "") {
-        alert("Digite uma data");
-        return;
-    }
-
-    if(exame === "") {
-        alert("Selecione um exame");
-        return;
-    }
-
-    if(unidade === "") {
-        alert("Selecione uma unidade");
-        return;
-    }
-
-    if(horario === "") {
-        alert("Selecione uma horario");
+    if(!nome || !cpf || !telefone || !exame || !unidade || !data || !horario) {
+        alert("Preencha todos os campos do agendamento");
         return;
     }
 

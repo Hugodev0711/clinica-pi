@@ -8,14 +8,14 @@ function validarCadastro(event) {
     let email = document.getElementById("email").value.trim();
     let senha = document.getElementById("senha").value;
     let confirmarSenha = document.getElementById("confirmar-senha").value;
-    let termos = document.getElementById("input[name='termos']").ariaChecked;
+    let termos = event.currentTarget.elements.termos.checked;
 
-    if(nome < 3) {
+    if(nome.length < 3) {
         alert("Digite seu nome completo.");
         return;
     }
 
-    if(validarCpf(cpf)) {
+    if(cpf.length !== 11) {
         alert("CPF invalido");
         return;
     }
