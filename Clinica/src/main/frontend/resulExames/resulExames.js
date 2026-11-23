@@ -1,7 +1,7 @@
 let form = document.getElementById("form-exames");
 let buscaExame = document.getElementById("busca-exame");
 let filtroStatus = document.getElementById("filtro-status");
-let exames = document.getElementById(".lista .exame");
+let exames = document.querySelector(".lista .exame");
 let semResultado = document.getElementById("sem-resultado");
 
 function filtrarExames() {

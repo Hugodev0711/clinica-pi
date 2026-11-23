@@ -60,11 +60,11 @@ function listarAgendamentos() {
 
             let linha = tabela.insertRow();
 
-            linha.insertCell().textContent = unidade.paciente;
-            linha.insertCell().textContent = unidade.data;
-            linha.insertCell().textContent = unidade.hora;
-            linha.insertCell().textContent = unidade.profissional;
-            linha.insertCell().textContent = unidade.status;
+            linha.insertCell().textContent = agendamento.paciente;
+            linha.insertCell().textContent = agendamento.data;
+            linha.insertCell().textContent = agendamento.hora;
+            linha.insertCell().textContent = agendamento.profissional;
+            linha.insertCell().textContent = agendamento.status;
 
             let acoes = linha.insertCell();
 
@@ -125,7 +125,7 @@ function adicionarAgendamento() {
         status: status
     };
 
-    unidades.push(novoAgendamento);
+    agendamentos.push(novoAgendamento);
     proximoId++;
 
     listarAgendamentos();

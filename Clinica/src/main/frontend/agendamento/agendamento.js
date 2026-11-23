@@ -1,4 +1,13 @@
-let form = document.querySelector("main-form");
+let form = document.querySelector("main form");
+
+let campoData = form.elements.data;
+let hoje = new Date();
+
+let ano = hoje.getFullYear();
+let mes = String(hoje.getMonth() + 1).padStart(2, "0");
+let dia = String(hoje.getDate()).padStart(2, "0");
+
+campoData.min = ano + "-" + mes + "-" + dia;
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -11,14 +20,17 @@ form.addEventListener("submit", function(event) {
     let data = form.elements.data.value;
     let horario = form.elements.horario.value;
 
+    let mensagem = document.getElementById("mensagem-agendamento");
+    mensagem.textContent = "";
+
     if(!nome || !cpf || !telefone || !exame || !unidade || !data || !horario) {
-        alert("Preencha todos os campos do agendamento");
+        mensagem.textContent = "Preencha todos os campos do agendamento";
         return;
     }
 
     let confirmacao = {
         exame: form.elements.exame.selectedOptions[0].textContent.trim(),
-        exame: form.elements.unidade.selectedOptions[0].textContent.trim(),
+        unidade: form.elements.unidade.selectedOptions[0].textContent.trim(),
         data: data.split("-").reverse().join("/"),
         horario: horario
     };

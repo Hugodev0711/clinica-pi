@@ -89,7 +89,7 @@ function lerPreco(mensagem, valorAtual = "") {
     }
 
     let valor = entrada.trim();
-    let preco = Number(valor.replace(",", "."));
+    let preco = Number(valor.split(",").join(";"));
 
     if(!Number.isFinite(preco) || preco < 0) {
             alert("Preço invalido");
