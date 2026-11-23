@@ -1,7 +1,7 @@
 let form = document.getElementById("form-exames");
 let buscaExame = document.getElementById("busca-exame");
 let filtroStatus = document.getElementById("filtro-status");
-let exames = document.getElementById("lista-exame");
+let exames = document.getElementById(".lista .exame");
 let semResultado = document.getElementById("sem-resultado");
 
 function filtrarExames() {
@@ -10,7 +10,7 @@ function filtrarExames() {
     let status = filtroStatus.value;
     let encontrou = false;
 
-    exames.array.forEach(function(exame) {
+    exames.forEach(function(exame) {
         let nome = exame.querySelector(".exame-nome").textContent.toLowerCase();
 
         if(nome.includes(busca) && (status === "" || exame.dataset.status === status)) {

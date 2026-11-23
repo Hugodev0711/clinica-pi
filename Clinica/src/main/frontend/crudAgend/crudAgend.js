@@ -1,4 +1,4 @@
-let funcionarios = [
+let agendamentos = [
     {
         id: 1,
         paciente: "Cauan Lima",
@@ -40,7 +40,7 @@ function listarAgendamentos() {
 
         let agendamento = agendamentos[i];
 
-        let correspondePesquisa = agendamento.nome.toLowerCase().includes(pesquisa);
+        let correspondePesquisa = agendamento.paciente.toLowerCase().includes(pesquisa);
 
         let correspondeFiltros = true;
 
@@ -60,7 +60,6 @@ function listarAgendamentos() {
 
             let linha = tabela.insertRow();
 
-            linha.insertCell().textContent = unidade.id;
             linha.insertCell().textContent = unidade.paciente;
             linha.insertCell().textContent = unidade.data;
             linha.insertCell().textContent = unidade.hora;
@@ -73,14 +72,14 @@ function listarAgendamentos() {
             editar.textContent = "Editar";
 
             editar.onclick = function() {
-                editarProcedimento(agendamento.id);
+                editarAgendamento(agendamento.id);
             };
 
             let excluir = document.createElement("button");
             excluir.textContent = "Excluir";
 
             excluir.onclick = function() {
-                excluirProcedimento(agendamento.id);
+                excluirAgendamento(agendamento.id);
             };
 
             acoes.appendChild(editar);
@@ -92,8 +91,8 @@ function listarAgendamentos() {
 
 function adicionarAgendamento() {
 
-    let nome = prompt("Nome do paciente:");
-    if(nome == null || nome.trim() == "") {
+    let paciente = prompt("Nome do paciente:");
+    if(paciente == null || paciente.trim() == "") {
         return;
     }
 
@@ -123,7 +122,7 @@ function adicionarAgendamento() {
         data: data,
         hora: hora,
         profissional: profissional,
-        status: "Agendado"
+        status: status
     };
 
     unidades.push(novoAgendamento);
@@ -134,7 +133,7 @@ function adicionarAgendamento() {
 }
 
 
-function editarAgentamento(id) {
+function editarAgendamento(id) {
 
     for(let i = 0; i < agendamentos.length; i++) {
         if(agendamentos[i].id == id) {
@@ -274,7 +273,7 @@ function aplicarFiltro() {
     }
 
     filtros[colunaAtual] = selecionados;
-    listarProcedimentos();
+    listarAgendamentos();
     fecharFiltro();
 
 }

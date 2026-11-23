@@ -1,4 +1,4 @@
-let listarProcedimentos = [
+let procedimentos = [
     {
         id: 1,
         nome: "Consulta Clínica",

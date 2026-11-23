@@ -1,4 +1,4 @@
-let form = document.getElementById("form-agendamento");
+let form = document.querySelector("main-form");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -16,9 +16,13 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    alert("Agendamento confirmado \n\n" + "Paciente: " + nome + "\n" + "Exame: " + exame + "\n" + 
-        "Unidade: " + unidade + "\n" + "Data: " + data.value + "\n" + "Horario: " + horario
-    );
+    let confirmacao = {
+        exame: form.elements.exame.selectedOptions[0].textContent.trim(),
+        exame: form.elements.unidade.selectedOptions[0].textContent.trim(),
+        data: data.split("-").reverse().join("/"),
+        horario: horario
+    };
 
-    form.reset();
+    sessionStorage.setItem("confirmacaoAgendamento", JSON.stringify(confirmacao));
+    window.location.href = "../agendConf/agendConf.html";
 });
