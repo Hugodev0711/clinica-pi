@@ -35,7 +35,7 @@ public class ClienteDao {
     }
 
     public List<Cliente> listarClientes(){
-        String sql = "SELECT * FROM cliente INNER JOIN usuario ON cliente.id_cliente = usuario.id_usuario";
+        String sql = "SELECT * FROM cliente INNER JOIN usuario ON cliente.usuario = usuario.id_usuario";
 
         try{
             Connection con = ConnectionPoolConfig.getConnection();

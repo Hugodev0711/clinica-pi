@@ -119,4 +119,36 @@ public class UsuarioDao {
             System.out.println("Falha ao conectar");
         }
     }
+
+    public Usuario buscarUsuario(String email){
+        String sql = "SELECT * FROM usuario WHERE email = ?";
+
+        try{
+            Connection con = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, email);
+
+            ResultSet rSet = stmt.executeQuery();
+            if(rSet.next()){
+                String id = rSet.getString("id_usuario");
+                String nome = rSet.getString("nome");
+                String cpf = rSet.getString("cpf");
+                LocalDate dataNascimento = rSet.getDate("data_nascimento").toLocalDate();
+                String emailU = rSet.getString("email");
+                String senha = rSet.getString("senha");
+                TipoUsuario tipoUsuario = TipoUsuario.valueOf(rSet.getString("tipo_usuario"));
+                String telefone = rSet.getString("telefone");
+
+                Usuario usuario = new Usuario(id,cpf, nome, dataNascimento, emailU, senha, tipoUsuario, telefone);
+                return usuario;
+            }
+
+            return null;
+
+        }catch (Exception e){
+            System.out.println("Falha ao conectar");
+            return null;
+        }
+    }
 }

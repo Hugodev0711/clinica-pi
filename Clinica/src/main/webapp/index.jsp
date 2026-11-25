@@ -1,24 +1,118 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="frontend/cadastro/cadastro.css">
+</head>
 <body>
-<h2>Criar Usuario</h2>
+  <header class="topo">
+    <a href="../login/login.html" class="topo_voltar"><img class="seta" src="${pageContext.request.contextPath}../imagens/seta.svg" alt="Seta">Voltar para o site</a>
+    <img src="${pageContext.request.contextPath}../imagens/logo.novo.png" alt="Clínica SP" class="topo_logo">
+    <div class="topo_cadeado">
+      <img class="cadeado" src="${pageContext.request.contextPath}../imagens/cadeado.svg" alt=\"Cadeado">
+      <span>Ambiente 100% Seguro</span>
+    </div>
+  </header>
 
-    <form action="/create-user" method="post" onsubmit="return validarFormulario()">
+  <main class="conteudo">
+    <section class="cartao">
+      <h3>Criar sua conta</h3>
 
-        <label>Nome do usuário</label>
-        <input type="hidden" id="id" name="id" value="${param.id}">
-        <input type="text" name="nome" id="nome" value="${param.nome}">
-        <input type="text" name="cpf" id="cpf" value="${param.cpf}">
-        <input type="text" name="dataNascimento" id="dataNascimento" value="${param.dataNascimento}">
-        <input type="text" name="email" id="email" value="${param.email}">
-        <input type="text" name="senha" id="senha">
-        <input type="text" name="tipoUsuario" id="tipoUsuario" value="${param.tipoUsuario}">
-        <input type="text" name="telefone" id="telefone" value="${param.telefone}">
+      <form action="/create-user" method="post" class="formulario">
+        <input type="hidden" id="id" name="id"></>
+        <input type="hidden" id="tipoUsuario" name="tipoUsuario" value="CLIENTE"></>
 
-        <button type="submit">Register</button>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
+        </div>
 
-    </form>
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
+                 maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
+        </div>
 
-    <script src = "js/validacao-cadastro.js"></script>
+        <div class="campo-duplo">
+          <div class="campo">
+            <label for="nascimento">Data de nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Mínimo de 8 caracteres"
+                 minlength="8" autocomplete="new-password" required>
+        </div>
+
+        <div class="campo">
+          <label for="confirmar-senha">Confirmar senha</label>
+          <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Digite a senha novamente"
+                 minlength="8" autocomplete="new-password" required>
+        </div>
+
+        <label class="termos">
+          <input type="checkbox" name="termos" required>
+          <span>Li e aceito os termos de uso e a política de privacidade</span>
+        </label>
+
+        <button type="submit" class="botao botao-principal">Cadastrar</button>
+        <a href="../login/login.html" class="botao botao-secundario">Já tenho conta</a>
+      </form>
+    </section>
+  </main>
+  <footer>
+        <div class="footer-bloco">
+            <div class="footer-colunas">
+                <img src="/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-colunas">
+                <h3>Serviços</h3>
+                <a href="../agendamento/agendamento.html">Agendar consulta</a>
+                <a href="../agendamento/agendamento.html">Agendar exame</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Pacientes</h3>
+                <a href="../login/login.html">Login</a>
+                <a href="../resulExames/resulExames.html">Resultado de exames</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Clínica</h3>
+                <a href="../unidades/unidades.html">Unidades</a>
+                <a href="../sobre-nós/sobre-nós.html">Sobre nós</a>
+            </div>
+            <div class="footer-colunas">
+                <h3>Fale Conosco</h3>
+                <p>WhatsApp: (11) 91234-5678</p>
+                <p>Segunda a Sexta: 7h às 20h</p>
+                <p>Sábado: 8h às 18h</p>
+                <p>ou ligue para (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bloco2">
+            <div class="footer-pagamentos">
+                <p>Formas de Pagamento</p>
+                <img src="${pageContext.request.contextPath}/frontend/imagens/pagamentos.svg" alt="Formas de Pagamento">
+            </div>
+            <div class="footer-selo">
+                <p>Site Seguro</p>
+                <img src="${pageContext.request.contextPath}/frontend/imagens/selo_security.svg" alt="Site Seguro">
+            </div>
+        </div>
+    </footer>
+  <script src="cadastro.js"></script>
 
 </body>
 </html>

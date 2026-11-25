@@ -4,7 +4,9 @@ public class Cliente {
     private String idCliente;
     private Usuario usuario;
 
-    public Cliente(Usuario usuario) {}
+    public Cliente(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Cliente(String idCliente, Usuario usuario) {
         this.idCliente = idCliente;
