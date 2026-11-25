@@ -139,14 +139,19 @@ O objetivo neste momento é alinhar a ideia entre os integrantes e deixar claro 
 <img width="1364" height="675" alt="image" src="https://github.com/user-attachments/assets/1ef990b5-9417-437e-b8ae-e05491600740" />
 
 7. Protótipo Figma
-<img width="1441" height="951" alt="image" src="https://github.com/user-attachments/assets/bae34a00-8c17-441f-acf4-367634c9a1b9" />
-Segue link do Protótipo: https://www.figma.com/proto/hijvrtmnjmhbHJa4vokoeo/Cl%C3%ADnica-SP---Website?node-id=0-1&t=kHDMG3EtjP7wYEdU-1
-<img width="1428" height="887" alt="image" src="https://github.com/user-attachments/assets/bfa46c87-e8c0-4777-910d-a788cd8bf222" />
-<img width="1430" height="949" alt="image" src="https://github.com/user-attachments/assets/48998c98-7c87-4086-ab6f-4013ca029633" />
-<img width="1432" height="793" alt="image" src="https://github.com/user-attachments/assets/6ba4efb9-2fcd-42ba-9ac6-9ed05b284136" />
-<img width="1431" height="944" alt="image" src="https://github.com/user-attachments/assets/934dd263-deca-4534-86d2-d9e91007e26c" />
-<img width="1425" height="945" alt="image" src="https://github.com/user-attachments/assets/6f009d09-d005-46d4-97a7-2bc8b7c03c3a" />
-<img width="1431" height="795" alt="image" src="https://github.com/user-attachments/assets/4917f153-bcb8-4db3-a799-364b55e2cbe7" />
+Segue link do Protótipo: https://www.figma.com/design/JcHNegoOMmlXJVR1kSfRI5/Cl%C3%ADnica-SP?node-id=0-1&t=EDkrag1b6apjDbeV-1
+<img width="654" height="780" alt="image" src="https://github.com/user-attachments/assets/17371d8d-b82b-43e6-a092-abcbef21fcfc" />
+<img width="654" height="506" alt="image" src="https://github.com/user-attachments/assets/8239d40c-a57b-4c32-8b7a-04b494cf6a74" />
+<img width="512" height="542" alt="image" src="https://github.com/user-attachments/assets/82d907c1-debf-4bb5-8b3c-f30192713cf4" />
+<img width="840" height="794" alt="image" src="https://github.com/user-attachments/assets/33652533-1a4c-487b-8c9f-86c6188d68ab" />
+<img width="837" height="747" alt="image" src="https://github.com/user-attachments/assets/d0e31b4d-891b-4474-a510-a08436b0d68a" />
+<img width="658" height="831" alt="image" src="https://github.com/user-attachments/assets/07a65f3b-a51c-48e2-aa41-3d71a0484fd8" />
+<img width="1075" height="685" alt="image" src="https://github.com/user-attachments/assets/898da3b5-4c0c-402b-86da-3ed85414726d" />
+<img width="842" height="532" alt="image" src="https://github.com/user-attachments/assets/5d056637-1f89-40fa-b762-f7e2182604cd" />
+<img width="836" height="534" alt="image" src="https://github.com/user-attachments/assets/8223bdbd-4e26-4e80-9b0d-06e5a6a8a516" />
+<img width="837" height="536" alt="image" src="https://github.com/user-attachments/assets/23035874-e35d-4b5b-9172-afa914f8ac78" />
+
+
 
 
 
