@@ -36,5 +36,5 @@ form.addEventListener("submit", function(event) {
     };
 
     sessionStorage.setItem("confirmacaoAgendamento", JSON.stringify(confirmacao));
-    window.location.href = "../agendConf/agendConf.html";
+    window.location.href = "../agendConf/agendConf.jsp";
 });

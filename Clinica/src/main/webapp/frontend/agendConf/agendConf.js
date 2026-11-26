@@ -1,7 +1,7 @@
 let dados = sessionStorage.getItem("confirmacaoAgendamento");
 
 if(dados === null) {
-    window.location.href = "../agendamento/agendamento.html";
+    window.location.href = "../agendamento/agendamento.jsp";
 }
 else {
     let confirmacao = JSON.parse(dados);

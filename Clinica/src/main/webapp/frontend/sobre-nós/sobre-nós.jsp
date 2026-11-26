@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
-    <link rel="stylesheet" href="sobre-nós.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <img class="logo" src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo">
         <input type="text" placeholder="Busque em todo site...">
         <div class="login" id="area-login">
-            <a href="../login/login.jsp"><img src="../imagens/login.svg" alt="Login">
+            <a href="${pageContext.request.contextPath}/login"><img src="${pageContext.request.contextPath}/frontend/imagens/login.svg" alt="Login">
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='../resulExames/resulExames.html'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='../agendamento/agendamento.html'">Agendamento de Exames</button>
+        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
+        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
     <nav>
         <div class="barra">
-            <a class="btn btn-cheio" href="../consultas/consultas.html">Consultas</a>
-            <a href="../exames/exames.html">Exames</a>
-            <a href="../unidades/unidades.html">Unidades</a>
-            <a href="../sobre-nós/sobre-nós.html">Sobre Nós</a>
+            <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
+            <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
+            <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
         </div>
     </nav>
     <div class="barra2">
@@ -54,22 +54,22 @@
             <p>As principais parcerias para lhe atender melhor.</p>
             <div class="linha">
                 <div class="elementos">
-                    <img src="../imagens/convBradesco.svg" alt="Bradesco">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convBradesco.svg" alt="Bradesco">
                 </div>
                 <div class="elementos">
-                    <img src="../imagens/convCareplus.svg" alt="Careplus">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convCareplus.svg" alt="Careplus">
                 </div>
                 <div class="elementos">
-                    <img src="../imagens/convEconomus.svg" alt="Economus">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convEconomus.svg" alt="Economus">
                 </div>
                 <div class="elementos">
-                    <img src="../imagens/convItau.svg" alt="Itau">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convItau.svg" alt="Itau">
                 </div>
                 <div class="elementos">
-                    <img src="../imagens/convNotredame.svg" alt="Notredame">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convNotredame.svg" alt="Notredame">
                 </div>
                 <div class="elementos">
-                    <img src="../imagens/convOmint.svg" alt="Omint">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/convOmint.svg" alt="Omint">
                 </div>
             </div>
         </section>
@@ -77,22 +77,22 @@
     <footer>
         <div class="footer-bloco">
             <div class="footer-colunas">
-                <img src="../imagens/logo.novo.png" alt="Logo" class="footer-logo">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
                 <h3>Serviços</h3>
-                <a href="../agendamento/agendamento.html">Agendar consulta</a>
-                <a href="../agendamento/agendamento.html">Agendar exame</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
-                <a href="../login/login.jsp">Login</a>
-                <a href="../resulExames/resulExames.html">Resultado de exames</a>
+                <a href="${pageContext.request.contextPath}/login">Login</a>
+                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
-                <a href="../unidades/unidades.html">Unidades</a>
-                <a href="../sobre-nós/sobre-nós.html">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>
@@ -105,16 +105,16 @@
         <div class="footer-bloco2">
             <div class="footer-pagamentos">
                 <p>Formas de Pagamento</p>
-                <img src="../imagens/pagamentos.svg" alt="Formas de Pagamento">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/pagamentos.svg" alt="Formas de Pagamento">
             </div>
             <div class="footer-selo">
                 <p>Site Seguro</p>
-                <img src="../imagens/selo_security.svg" alt="Site Seguro">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/selo_security.svg" alt="Site Seguro">
             </div>
         </div>
     </footer>
 
-    <script src="sobre-nós.js"></script>
-    <script src="../header.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/header.js"></script>
 </body>
 </html>
