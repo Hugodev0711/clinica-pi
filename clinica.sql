@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS agendamentos(
 	id_agendamento INT PRIMARY KEY AUTO_INCREMENT,
     data_agendamento DATE NOT NULL,
     hora TIME NOT NULL,
-    status VARCHAR(20) NOT NULL DEFAULT "ATIVO",
+    status VARCHAR(20) NOT NULL DEFAULT 'ATIVO',
     id_unidade INT,
 	id_procedimento INT,
     id_cliente INT,

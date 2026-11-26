@@ -121,7 +121,7 @@
                                 <td><c:out value="${a.dataAgendamento}" /></td>
                                 <td><c:out value="${a.horaAgendamento}" /></td>
                                 <td><c:out value="${a.funcionario.idFuncionario}" /></td>
-                                <td><c:out value="${a.status}" /></td>
+                                <td><c:out value="${a.statusAgendamento}" /></td>
 
                                 <td class="acoes">
                                     <button type="button" class="btn-acao editar"
@@ -132,7 +132,7 @@
                                             data-procedimento="<c:out value='${a.procedimento.idProcedimento}' />"
                                             data-data="<c:out value='${a.dataAgendamento}' />"
                                             data-hora="<c:out value='${a.horaAgendamento}' />"
-                                            data-status="<c:out value='${a.status.name()}' />"
+                                            data-status="<c:out value='${a.statusAgendamento.name()}' />"
                                             onclick="editarAgendamento(this)">
                                         Editar
                                     </button>
