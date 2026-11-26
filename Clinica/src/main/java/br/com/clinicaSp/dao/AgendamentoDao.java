@@ -178,13 +178,27 @@ public class AgendamentoDao {
 
     public void atualizarAgendamento(Agendamento agendamento) {
 
-        String sql = "UPDATE agendamentos SET data_agendamento = ? WHERE id_agendamento = ?";
+        String sql = "UPDATE agendamentos SET data_agendamento = ?, " +
+                "hora = ?, " +
+                "status = ?, " +
+                "id_unidade = ?, " +
+                "id_procedimento = ?, " +
+                "id_cliente = ?, " +
+                "id_funcionario = ? " +
+                "WHERE id_agendamento = ?";
 
         try {
             Connection con = ConnectionPoolConfig.getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
 
             stmt.setString(1, agendamento.getDataAgendamento().toString());
+            stmt.setString(2, agendamento.getHoraAgendamento().toString());
+            stmt.setString(3, agendamento.getStatusAgendamento().toString());
+            stmt.setString(4, agendamento.getUnidade().getIdUnidade());
+            stmt.setString(5, agendamento.getProcedimento().getIdProcedimento());
+            stmt.setString(6, agendamento.getCliente().getIdCliente());
+            stmt.setString(7, agendamento.getFuncionario().getIdFuncionario());
+            stmt.setString(8, agendamento.getIdAgendamento());
 
             stmt.execute();
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.css">
 </head>
 <body>
     <header>
@@ -16,8 +16,6 @@
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
     <nav>
@@ -25,7 +23,7 @@
             <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
             <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
             <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre Nós</a>
         </div>
     </nav>
     <div class="barra2">
@@ -81,19 +79,13 @@
                 <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
-                <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
-            </div>
-            <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/login">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
                 <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>
@@ -115,7 +107,7 @@
         </div>
     </footer>
 
-    <script src="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.js"></script>
     <script src="${pageContext.request.contextPath}/frontend/header.js"></script>
 </body>
 </html>

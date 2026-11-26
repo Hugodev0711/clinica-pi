@@ -37,6 +37,6 @@ public class CreateProcedimentoServlet extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Duração ou preço inválido");
             return;
         }
-        resp.sendRedirect("/listar-procedimentos");
+        resp.sendRedirect(req.getContextPath() +  "/listar-procedimentos");
     }
 }

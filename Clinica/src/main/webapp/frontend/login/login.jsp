@@ -44,19 +44,13 @@
                 <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
-                <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar exame</a>
-            </div>
-            <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/frontend/login/login.html">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.html">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
                 <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.html">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.html">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.html">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>

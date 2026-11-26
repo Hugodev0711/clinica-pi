@@ -16,8 +16,6 @@
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
     <nav>
@@ -25,7 +23,7 @@
             <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
             <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
             <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre Nós</a>
         </div>
     </nav>
     <div class="barra2">
@@ -37,37 +35,31 @@
                 <h3>Entero Tomografia</h3>
                 <p>Em até 12x de R$ 107,50</p>
                 <p>ou R$ 1225,50 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
             <div class="banner-content">
                 <h3>Densitometria Ossea</h3>
                 <p>Em até 5x de R$ 53,80</p>
                 <p>ou R$ 255,55 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
             <div class="banner-content">
                 <h3>Linfocintilografia</h3>
                 <p>Em até 11x de R$ 52,73</p>
                 <p>ou R$ 551,00 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
             <div class="banner-content">
                 <h3>Fluxo Sanguíneo Osseo</h3>
                 <p>Em até 12x de R$ 65,00</p>
                 <p>ou R$ 741,00 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
             <div class="banner-content">
                 <h3>Ecocardiograma</h3>
                 <p>Em até 8x de R$ 50,00</p>
                 <p>ou R$ 380,00 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
             <div class="banner-content">
                 <h3>Raio-X</h3>
                 <p>Em até 3x de R$ 6,50</p>
                 <p>ou R$ 15,00 no Pix</p>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar</a>
             </div>
         </section>
 
@@ -102,19 +94,13 @@
                 <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
-                <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
-            </div>
-            <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/login">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
                 <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>

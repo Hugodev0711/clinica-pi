@@ -41,6 +41,7 @@ public class Usuario {
     }
 
     public String getId() {return idUsuario;}
+    public void setId(String idUsuario) {this.idUsuario = idUsuario;}
 
     public String getCpf() {return cpf;}
 

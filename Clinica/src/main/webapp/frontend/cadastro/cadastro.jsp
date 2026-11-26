@@ -21,9 +21,9 @@
     <section class="cartao">
       <h3>Criar sua conta</h3>
 
-      <form action="/create-user" method="post" class="formulario">
-        <input type="hidden" id="id" name="id"></>
-        <input type="hidden" id="tipoUsuario" name="tipoUsuario" value="CLIENTE"></>
+      <form action="${pageContext.request.contextPath}/create-user" method="post" class="formulario">
+        <input type="hidden" id="id" name="id">
+        <input type="hidden" id="tipoUsuario" name="tipoUsuario" value="CLIENTE">
 
         <div class="campo">
           <label for="nome">Nome completo</label>
@@ -38,7 +38,7 @@
 
         <div class="campo-duplo">
           <div class="campo">
-            <label for="nascimento">Data de nascimento</label>
+            <label for="dataNascimento">Data de nascimento</label>
             <input type="date" id="dataNascimento" name="dataNascimento" required>
           </div>
           <div class="campo">
@@ -80,19 +80,13 @@
                 <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
-                <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar exame</a>
-            </div>
-            <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/login">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.html">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
                 <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.html">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.html">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>

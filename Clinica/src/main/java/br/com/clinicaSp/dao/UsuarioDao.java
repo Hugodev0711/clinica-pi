@@ -4,10 +4,7 @@ import br.com.clinicaSp.config.ConnectionPoolConfig;
 import br.com.clinicaSp.model.TipoUsuario;
 import br.com.clinicaSp.model.Usuario;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +17,7 @@ public class UsuarioDao {
         try{
             Connection con = ConnectionPoolConfig.getConnection();
 
-            PreparedStatement stmt = con.prepareStatement(SQL);
+            PreparedStatement stmt = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
 
             stmt.setString(1, usuario.getCpf());
             stmt.setString(2, usuario.getNome());
@@ -31,6 +28,13 @@ public class UsuarioDao {
             stmt.setString(7, usuario.getTelefone());
 
             stmt.execute();
+
+            ResultSet rs = stmt.getGeneratedKeys();
+
+            if(rs.next()){
+                usuario.setId(rs.getString(1));
+                System.out.println("ID GERADO: " + usuario.getId());
+            }
 
             System.out.println("Sucesso ao inserir usuário");
 

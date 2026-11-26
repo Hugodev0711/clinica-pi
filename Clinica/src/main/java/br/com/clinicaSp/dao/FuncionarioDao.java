@@ -96,13 +96,20 @@ public class FuncionarioDao {
     }
 
     public void atualizarFuncionario(Funcionario funcionario){
-        String sql = "UPDATE funcionario SET cargo = ? WHERE id_funcionario = ?";
+        String sql = "UPDATE funcionario SET especialidade = ?, " +
+                "cargo = ?, " +
+                "salario = ?, " +
+                "id_usuario = ? " +
+                "WHERE id_funcionario = ?";
 
         try{
             Connection con = ConnectionPoolConfig.getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, funcionario.getCargo());
-            stmt.setString(2, funcionario.getIdFuncionario());
+            stmt.setString(1, funcionario.getEspecialidade());
+            stmt.setString(2, funcionario.getCargo());
+            stmt.setDouble(3, funcionario.getSalario());
+            stmt.setString(4, funcionario.getUsuario().getId());
+            stmt.setString(5, funcionario.getIdFuncionario());
             stmt.execute();
 
             System.out.println("Sucesso ao atualizar funcionario");

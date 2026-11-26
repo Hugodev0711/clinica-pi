@@ -1,5 +1,6 @@
 package br.com.clinicaSp.usuarioServlet;
 
+import br.com.clinicaSp.dao.ClienteDao;
 import br.com.clinicaSp.dao.UsuarioDao;
 import br.com.clinicaSp.model.TipoUsuario;
 import br.com.clinicaSp.model.Usuario;
@@ -27,13 +28,16 @@ public class CreateUsuarioServlet extends HttpServlet {
 
         Usuario usuario = new Usuario(id,cpf, nome, LocalDate.parse(dataNascimento), email, senha, TipoUsuario.valueOf(tipoUsuario), telefone);
         UsuarioDao usuarioDao = new UsuarioDao();
+        ClienteDao clienteDao = new ClienteDao();
 
         if(id.isBlank()){
             usuarioDao.criarUsuario(usuario);
+            clienteDao.inserirCliente(usuario.getId());
+
         }else{
             usuarioDao.AtualizarUsuario(usuario);
         }
 
-        response.sendRedirect("/listar-usuarios");
+        response.sendRedirect(request.getContextPath() + "/frontend/login/login.jsp");
     }
 }

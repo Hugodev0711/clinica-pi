@@ -83,7 +83,7 @@ public class ProcedimentoDao {
                 TipoUsuario tipoUsuario = TipoUsuario.valueOf(rSet.getString("tipo_usuario"));
                 String telefone = rSet.getString("telefone");
 
-                Usuario usuario = new Usuario(idUsuario, nome, cpf, dataNascimento, email, senha, tipoUsuario, telefone);
+                Usuario usuario = new Usuario(idUsuario, cpf, nome, dataNascimento, email, senha, tipoUsuario, telefone);
 
                 String idFuncionario = rSet.getString("id_funcionario");
                 String especialidade = rSet.getString("especialidade");
@@ -129,24 +129,39 @@ public class ProcedimentoDao {
         }
     }
 
-    public void atualizarProcedimento(Procedimento procedimento){
-        String sql = "UPDATE procedimento SET nome = ? WHERE id_procedimento = ?";
+    public void atualizarProcedimento(Procedimento procedimento) {
 
-        try{
-            Connection con = ConnectionPoolConfig.getConnection();
+        String sql = "UPDATE procedimento SET " +
+                "duracao = ?, " +
+                "nome = ?, " +
+                "preco = ?, " +
+                "id_unidade = ?, " +
+                "id_funcionario = ? " +
+                "WHERE id_procedimento = ?";
 
-            PreparedStatement stmt = con.prepareStatement(sql);
+        try (Connection con = ConnectionPoolConfig.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
 
-            stmt.setString(1, procedimento.getNomeProcedimento());
+            stmt.setTime(1, Time.valueOf(
+                    LocalTime.ofSecondOfDay(procedimento.getDuracao().getSeconds())
+            ));
 
-            stmt.execute();
+            stmt.setString(2, procedimento.getNomeProcedimento());
+            stmt.setDouble(3, procedimento.getPreco());
+            stmt.setString(4, procedimento.getUnidade().getIdUnidade());
+            stmt.setString(5, procedimento.getFuncionario().getIdFuncionario());
+            stmt.setString(6, procedimento.getIdProcedimento());
 
-            System.out.println("Sucesso ao atualizar procedimento");
+            int linhasAfetadas = stmt.executeUpdate();
 
-            con.close();
+            if (linhasAfetadas > 0) {
+                System.out.println("Procedimento atualizado com sucesso.");
+            } else {
+                System.out.println("Nenhum procedimento encontrado para atualizar.");
+            }
 
-        }catch(Exception e){
-            System.out.println("Falha ao conectar");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

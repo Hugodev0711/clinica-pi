@@ -92,7 +92,11 @@ public class UnidadeDao {
     }
 
     public void atualizarUnidade(Unidade unidade){
-        String sql = "UPDATE unidade SET nome = ? WHERE id_unidade = ?";
+        String sql = "UPDATE unidade SET nome = ?, " +
+                "cnpj = ?, " +
+                "cep = ?, " +
+                "numero = ? " +
+                "WHERE id_unidade = ?";
 
         try{
             Connection con = ConnectionPoolConfig.getConnection();
@@ -100,6 +104,10 @@ public class UnidadeDao {
             PreparedStatement stmt = con.prepareStatement(sql);
 
             stmt.setString(1, unidade.getNome());
+            stmt.setString(2, unidade.getCnpj());
+            stmt.setString(3, unidade.getCep());
+            stmt.setString(4, unidade.getNumero());
+            stmt.setString(5, unidade.getIdUnidade());
 
             stmt.execute();
 

@@ -11,7 +11,15 @@ import java.io.IOException;
 public class DeleteProcedimentoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        new ProcedimentoDao().deletarProcedimento(req.getParameter("idProcedimento"));
+        String id = req.getParameter("idProcedimento");
+
+        if (id.isBlank()) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "ID do procedimento não informado.");
+            return;
+        }
+
+        new ProcedimentoDao().deletarProcedimento(id);
+
         resp.sendRedirect(req.getContextPath() + "/listar-procedimentos");
     }
 }

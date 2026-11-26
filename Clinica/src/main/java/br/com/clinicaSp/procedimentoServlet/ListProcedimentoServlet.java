@@ -16,6 +16,6 @@ public class ListProcedimentoServlet extends HttpServlet {
         req.setAttribute("procedimentos", new ProcedimentoDao().listarProcedimentos());
         req.setAttribute("unidades", new UnidadeDao().listarUnidades());
         req.setAttribute("funcionarios", new FuncionarioDao().listarFuncionario());
-        req.getRequestDispatcher("/procedimentos.jsp").forward(req, resp);
+        req.getRequestDispatcher("/frontend/crudProc/crudProc.jsp").forward(req, resp);
     }
 }

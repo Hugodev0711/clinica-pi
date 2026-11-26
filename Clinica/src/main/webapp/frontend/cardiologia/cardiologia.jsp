@@ -16,8 +16,6 @@
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
     <nav>
@@ -25,7 +23,7 @@
             <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
             <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
             <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos.jsp">Sobre Nós</a>
         </div>
     </nav>
 
@@ -36,9 +34,6 @@
                 <h1>Cuide do seu coração<br><em>com quem entende.</em></h1>
                 <p>Cardiologistas experientes, exames completos e atendimento humanizado. Consultas a partir de <strong>R$
                     190</strong>, sem burocracia e sem filas longas.</p>
-                <div class="botao">
-                    <a class="bot" href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar Consulta</a>
-                </div>
             </div>
             <div class="imagem"></div>
         </section>
@@ -117,19 +112,15 @@
                 <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
-                <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/login">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
                 <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobreNos/sobreNos">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>

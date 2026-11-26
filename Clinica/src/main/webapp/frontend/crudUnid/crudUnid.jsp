@@ -29,7 +29,7 @@
                     <span>Funcionários</span>
                 </a>
 
-                <a href="${pageContext.request.contextPath}/frontend/crudProc/crudProc.jsp">
+                <a href="${pageContext.request.contextPath}/listar-procedimentos">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/procedimentos.svg" alt="Procedimentos">
                     <span>Procedimentos</span>
                 </a>
