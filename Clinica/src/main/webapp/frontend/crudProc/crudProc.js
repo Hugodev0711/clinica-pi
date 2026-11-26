@@ -14,8 +14,6 @@ let filtros = {
     idFuncionario: null
 };
 
-// Converte a duração ISO-8601 do Java para minutos.
-// Exemplos: PT30M = 30, PT1H30M = 90.
 function converterDuracaoParaMinutos(duracao) {
     const formato = /^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/;
 
