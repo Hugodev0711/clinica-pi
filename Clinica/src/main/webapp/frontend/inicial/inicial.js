@@ -38,7 +38,7 @@ function logout() {
 
     alert("Logout efetuado com sucesso");
 
-    window.location.href = "../inicial/inicial.html"
+    window.location.href = "../inicial/inicial.jsp"
 
 }
 

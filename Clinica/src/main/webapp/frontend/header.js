@@ -1,28 +1,27 @@
+let caminhoHeader = document.currentScript.src;
 let usuarioLogado = localStorage.getItem("usuarioLogado");
 let areaLogin = document.getElementById("area-login");
 
-if(areaLogin) {
-    if(usuarioLogado == "true") {
+if (areaLogin && usuarioLogado === "true") {
+    let iconeLogin = new URL("imagens/login.svg", caminhoHeader).href;
+
     areaLogin.innerHTML = `
         <div class="usuario-logado">
             <div class="info-usuario">
-                <img src="${pageContext.request.contextPath}/frontend/imagens/login.svg" alt="Usuário">
+                <img src="${iconeLogin}" alt="Usuário">
                 <span>Minha Conta</span>
             </div>
 
-            <button onclick="logout()">Sair</button>
+            <button type="button" onclick="logout()">Sair</button>
         </div>
     `;
-    }
 }
 
 function logout() {
-
     localStorage.removeItem("usuarioLogado");
     localStorage.removeItem("emailUsuario");
 
     alert("Logout realizado com sucesso!");
 
-    window.location.href = "${pageContext.request.contextPath}/frontend/inicial/inicial.jsp";
-
+    window.location.href = new URL("inicial/inicial.jsp", caminhoHeader).href;
 }

@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastroenterologia</title>
-    <link rel="stylesheet" href="gastroenterologia.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/gastroenterologia/gastroenterologia.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <img class="logo" src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo">
         <input type="text" placeholder="Busque em todo site...">
         <div class="login" id="area-login">
-            <a href="../login/login.jsp"><img src="../imagens/login.svg" alt="Login">
+            <a href="${pageContext.request.contextPath}/login"><img src="${pageContext.request.contextPath}/frontend/imagens/login.svg" alt="Login">
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='../resulExames/resulExames.html'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='../agendamento/agendamento.html'">Agendamento de Exames</button>
+        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
+        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
     <nav>
         <div class="barra">
-            <a class="btn btn-cheio" href="../consultas/consultas.html">Consultas</a>
-            <a href="../exames/exames.html">Exames</a>
-            <a href="../unidades/unidades.html">Unidades</a>
-            <a href="../sobre-nós/sobre-nós.html">Sobre Nós</a>
+            <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
+            <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
+            <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
         </div>
     </nav>
 
@@ -38,7 +38,7 @@
                     colonoscopia e consulta especializada com atendimento humanizado e preços 
                     acessíveis.</p>
                 <div class="botao">
-                    <a class="bot" href="../agendamento/agendamento.html">Agendar Consulta</a>
+                    <a class="bot" href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar Consulta</a>
                 </div>
             </div>
             <div class="imagem"></div>
@@ -53,28 +53,28 @@
 
         <section class="linha">
             <div class="elementos">
-                <img src="../imagens/pix-logo.png" alt="Pix">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/pix-logo.png" alt="Pix">
                 <div class="elementos-texto">
                     <p>5% OFF NO PIX</p>
                     <p>Desconto no pagamento antecipado</p>
                 </div>
             </div>
             <div class="elementos">
-                <img src="../imagens/CARD.pNg" alt="Cartão">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/CARD.png" alt="Cartão">
                 <div class="elementos-texto">
                     <p>10X SEM JUROS</p>
                     <p>Para compras a partir de R$ 500,00</p>
                 </div>
             </div>
             <div class="elementos">
-                <img src="../imagens/descontos-especiais.png" alt="Desconto">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/descontos-especiais.png" alt="Desconto">
                 <div class="elementos-texto">
                     <p>DESCONTOS ESPECIAIS</p>
                     <p>Planos e pacotes promocionais</p>
                 </div>
             </div>
             <div class="elementos">
-                <img src="../imagens/atendimento-personalizado.png" alt="Atendimento">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/atendimento-personalizado.png" alt="Atendimento">
                 <div class="elementos-texto">
                     <p>ATENDIMENTO PERSONALIZADO</p>
                     <p>Agendamento sem burocracia</p>
@@ -116,22 +116,22 @@
     <footer>
         <div class="footer-bloco">
             <div class="footer-colunas">
-                <img src="../imagens/logo.novo.png" alt="Logo" class="footer-logo">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo" class="footer-logo">
             </div>
             <div class="footer-colunas">
                 <h3>Serviços</h3>
-                <a href="../agendamento/agendamento.html">Agendar consulta</a>
-                <a href="../agendamento/agendamento.html">Agendar exame</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
-                <a href="../login/login.jsp">Login</a>
-                <a href="../resulExames/resulExames.html">Resultado de exames</a>
+                <a href="${pageContext.request.contextPath}/login">Login</a>
+                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
-                <a href="../unidades/unidades.html">Unidades</a>
-                <a href="../sobre-nós/sobre-nós.html">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>
@@ -144,16 +144,16 @@
         <div class="footer-bloco2">
             <div class="footer-pagamentos">
                 <p>Formas de Pagamento</p>
-                <img src="../imagens/pagamentos.svg" alt="Formas de Pagamento">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/pagamentos.svg" alt="Formas de Pagamento">
             </div>
             <div class="footer-selo">
                 <p>Site Seguro</p>
-                <img src="../imagens/selo_security.svg" alt="Site Seguro">
+                <img src="${pageContext.request.contextPath}/frontend/imagens/selo_security.svg" alt="Site Seguro">
             </div>
         </div>
     </footer>
 
-    <script src="gastroenterologia.js"></script>
-    <script src="../header.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/gastroenterologia/gastroenterologia.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/header.js"></script>
 </body>
 </html>

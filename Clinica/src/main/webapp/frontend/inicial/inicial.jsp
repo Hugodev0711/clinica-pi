@@ -23,9 +23,9 @@
     <nav>
         <div class="barra">
             <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.html">Consultas</a>
-            <a href="frontend/exames/exames.html">Exames</a>
-            <a href="frontend/unidades/unidades.html">Unidades</a>
-            <a href="frontend/sobre-nós/sobre-nós.html">Sobre Nós</a>
+            <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
+            <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+            <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
         </div>
     </nav>
 

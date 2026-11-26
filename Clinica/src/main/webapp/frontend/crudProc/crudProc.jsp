@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Controle</title>
-    <link rel="stylesheet" href="crudProc.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/crudProc/crudProc.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="../imagens/logo.novo.png" alt="Logo">
+        <img class="logo" src="${pageContext.request.contextPath}/frontend/imagens/logo.novo.png" alt="Logo">
         <input type="text" id="pesquisa" placeholder="Busque procedimentos..." onkeyup="listarProcedimentos()">
 
-        <a class="login" href="../login/login.jsp">
-            <img src="../imagens/login.svg" alt="Login">
+        <a class="login" href="${pageContext.request.contextPath}/login">
+            <img src="${pageContext.request.contextPath}/frontend/imagens/login.svg" alt="Login">
             <span>Login</span>
         </a>
     </header>
@@ -21,20 +21,20 @@
 
         <aside class="barra-lateral">
             <nav class="barra">
-                <a href="../crudFunc/crudFunc.jsp">
-                    <img src="../imagens/funcionários.svg" alt="Funcionários">
+                <a href="${pageContext.request.contextPath}/frontend/crudFunc/crudFunc.jsp">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/funcionários.svg" alt="Funcionários">
                     <span>Funcionários</span>
                 </a>
-                <a href="../crudProc/crudProc.html" class="selecionado">
-                    <img src="../imagens/procedimentos.svg" alt="Procedimentos">
+                <a href="${pageContext.request.contextPath}/frontend/crudProc/crudProc.jsp">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/procedimentos.svg" alt="Procedimentos">
                     <span>Procedimentos</span>
                 </a>
-                <a href="../crudUnid/crudUnid.html">
-                    <img src="../imagens/unidades.svg" alt="Unidades">
+                <a href="${pageContext.request.contextPath}/frontend/crudUnid/crudUnid.jsp">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/unidades.svg" alt="Unidades">
                     <span>Unidades</span>
                 </a>
-                <a href="../crudAgend/crudAgend.html">
-                    <img src="../imagens/agendamentos.svg" alt="Agendamentos">
+                <a href="${pageContext.request.contextPath}/frontend/crudAgend/crudAgend.jsp" class="selecionado">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/agendamentos.svg" alt="Agendamentos">
                     <span>Agendamentos</span>
                 </a>
             </nav>
@@ -74,7 +74,7 @@
             </section>
         </div>
 
-    <script src = "crudProc.js"></script>
+    <script src = "${pageContext.request.contextPath}/frontend/crudProc/crudProc.js"></script>
 
 </body>
 </html>
