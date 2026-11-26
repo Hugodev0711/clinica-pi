@@ -1,6 +1,7 @@
 package br.com.clinicaSp.usuarioServlet;
 
 import br.com.clinicaSp.dao.UsuarioDao;
+import br.com.clinicaSp.model.TipoUsuario;
 import br.com.clinicaSp.model.Usuario;
 
 import javax.servlet.ServletException;
@@ -31,10 +32,16 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("usuarioLogado", usuario);
 
-            resp.sendRedirect(req.getContextPath() + "/frontend/inicial/inicial.jsp");
+            if(usuario.getTipoUsuario() == TipoUsuario.ADMIN){
+                resp.sendRedirect(req.getContextPath() + "/frontend/inicialADM/inicialADM.jsp");
+            }else{
+                resp.sendRedirect(req.getContextPath() + "/frontend/inicial/inicial.jsp");
+            }
         }else{
             req.setAttribute("erro", "E-mail ou senha incorretos.");
             req.getRequestDispatcher("/frontend/login/login.jsp").forward(req, resp);
         }
+
+
     }
 }

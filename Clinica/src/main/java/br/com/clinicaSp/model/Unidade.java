@@ -5,9 +5,9 @@ public class Unidade {
     private String cnpj;
     private String nome;
     private String cep;
-    private int numero;
+    private String numero;
 
-    public Unidade(String idUnidade, String cnpj, String nome, String cep, int numero) {
+    public Unidade(String idUnidade, String cnpj, String nome, String cep, String numero) {
         this.idUnidade = idUnidade;
         this.cnpj = cnpj;
         this.nome = nome;
@@ -25,6 +25,6 @@ public class Unidade {
     public String getCep() {return cep;}
     public void setCep(String cep) {this.cep = cep;}
 
-    public int getNumero() {return numero;}
-    public void setNumero(int numero) {this.numero = numero;}
+    public String getNumero() {return numero;}
+    public void setNumero(String numero) {this.numero = numero;}
 }

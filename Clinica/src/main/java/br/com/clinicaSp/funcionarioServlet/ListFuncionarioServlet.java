@@ -14,6 +14,6 @@ public class ListFuncionarioServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("funcionarios", new FuncionarioDao().listarFuncionario());
         req.setAttribute("usuarios", new UsuarioDao().listarUsuarios());
-        req.getRequestDispatcher("/funcionarios.jsp").forward(req, resp);
+        req.getRequestDispatcher("/frontend/crudFunc/crudFunc.jsp").forward(req, resp);
     }
 }

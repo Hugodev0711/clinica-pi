@@ -22,7 +22,7 @@ public class CreateVagaServlet extends HttpServlet {
             LocalDate data = LocalDate.parse(req.getParameter("dataVaga"));
             LocalTime hora = LocalTime.parse(req.getParameter("horaVaga"));
             Procedimento p = new Procedimento(req.getParameter("idProcedimento"), null, null, 0.0, null, null);
-            Unidade un = new Unidade(req.getParameter("idUnidade"), null, null, null, 0);
+            Unidade un = new Unidade(req.getParameter("idUnidade"), null, null, null, null);
             Vaga vaga = new Vaga(id, data, hora, p, un);
             VagaDao dao = new VagaDao();
             if (id == null || id.isBlank()) dao.inserirVaga(vaga);

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +23,7 @@
         <aside class="barra-lateral">
             <nav class="barra">
                 <a href="${pageContext.request.contextPath}/frontend/crudFunc/crudFunc.jsp">
-                    <img src="${pageContext.request.contextPath}/frontend/imagens/funcionários.svg" alt="Funcionários">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/funcionarios.svg" alt="Funcionários">
                     <span>Funcionários</span>
                 </a>
                 <a href="${pageContext.request.contextPath}/frontend/crudProc/crudProc.jsp">

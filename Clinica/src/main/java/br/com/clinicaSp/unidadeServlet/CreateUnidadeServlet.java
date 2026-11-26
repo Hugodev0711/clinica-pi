@@ -1,3 +1,4 @@
+
 package br.com.clinicaSp.unidadeServlet;
 
 import br.com.clinicaSp.dao.UnidadeDao;
@@ -13,13 +14,12 @@ import java.io.IOException;
 public class CreateUnidadeServlet extends HttpServlet {
 
     @Override
-    protected void doPost (HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String id = req.getParameter("idUnidade");
         String cnpj = req.getParameter("cnpj");
         String nome = req.getParameter("nome");
         String cep = req.getParameter("cep");
-        String numT = req.getParameter("numero");
-        int numero = Integer.parseInt(numT);
+        String numero = req.getParameter("numero");
 
         Unidade unidade = new Unidade(id, cnpj, nome, cep, numero);
         UnidadeDao unidadeDao = new UnidadeDao();
@@ -27,9 +27,9 @@ public class CreateUnidadeServlet extends HttpServlet {
         if (id.isBlank()) {
             unidadeDao.inserirUnidade(unidade);
         } else {
-            //atualizar
+            unidadeDao.atualizarUnidade(unidade);
         }
 
-        resp.sendRedirect("listar-unidade");
+        resp.sendRedirect(req.getContextPath() + "/listar-unidades");
     }
 }

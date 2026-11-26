@@ -21,7 +21,7 @@ public class CreateProcedimentoServlet extends HttpServlet {
         try {
             Duration duracao = Duration.ofMinutes(Long.parseLong(req.getParameter("duracaoMinutos")));
             double preco = Double.parseDouble(req.getParameter("preco").replace(",", "."));
-            Unidade unidade = new Unidade(req.getParameter("idUnidade"), null, null, null, 0);
+            Unidade unidade = new Unidade(req.getParameter("idUnidade"), null, null, null, null);
             Funcionario func = new Funcionario(req.getParameter("idFuncionario"), null, null, null, 0.0);
             Procedimento p = new Procedimento(id, duracao, req.getParameter("nome"), preco, unidade, func);
 

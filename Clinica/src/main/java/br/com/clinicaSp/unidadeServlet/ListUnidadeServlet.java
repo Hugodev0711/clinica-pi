@@ -20,6 +20,6 @@ public class ListUnidadeServlet extends HttpServlet {
 
         req.setAttribute("unidades", unidades);
 
-        req.getRequestDispatcher("").forward(req, resp);
+        req.getRequestDispatcher("/frontend/crudUnid/crudUnid.jsp").forward(req, resp);
     }
 }

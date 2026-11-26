@@ -1,10 +1,11 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial ADM</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/inicial/inicialADM.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontend/inicialADM/inicialADM.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -16,17 +17,18 @@
             <span>Login</span>
             </a>
         </div>
-        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.html'">Resultado de Exames</button>
-        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.html'">Agendamento de Exames</button>
+        <button class="headerbutton1" onclick="location.href='${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp'">Resultado de Exames</button>
+        <button class="headerbutton2" onclick="location.href='${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp'">Agendamento de Exames</button>
     </header>
 
 
     <nav>
         <div class="barra">
-            <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.html">Consultas</a>
+            <a class="btn btn-cheio" href="${pageContext.request.contextPath}/frontend/consultas/consultas.jsp">Consultas</a>
             <a href="${pageContext.request.contextPath}/frontend/exames/exames.jsp">Exames</a>
             <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
             <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre Nós</a>
+            <a href="${pageContext.request.contextPath}/frontend/crudFunc/crudFunc.jsp">Cadastro</a>
         </div>
     </nav>
 
@@ -45,12 +47,12 @@
         <p class="p1" ><span class="vermelha">Clínica:</span> Tudo em um único lugar</p>
         <p class="p2">Especialidades <span class="vermelha">mais procuradas</span></p>
         <div class="especialidades">
-            <a href="${pageContext.request.contextPath}/frontend/cardiologia/cardiologia.html">Cardiologia</a>
-            <a href="${pageContext.request.contextPath}/frontend/endocrinologia/endocrinologia.html">Endocrinologia</a>
-            <a href="${pageContext.request.contextPath}/frontend/gastroenterologia/gastroenterologia.html">Gastroenterologia</a>
-            <a href="${pageContext.request.contextPath}/frontend/cirurgia-geral/cirurgia-geral.html">Cirurgia Geral</a>
-            <a href="${pageContext.request.contextPath}/frontend/ortopedia/ortopedia.html">Ortopedia</a>
-            <a href="${pageContext.request.contextPath}/frontend/dermatologia/dermatologia.html">Dermatologia</a>
+            <a href="${pageContext.request.contextPath}/frontend/cardiologia/cardiologia.jsp">Cardiologia</a>
+            <a href="${pageContext.request.contextPath}/frontend/endocrinologia/endocrinologia.jsp">Endocrinologia</a>
+            <a href="${pageContext.request.contextPath}/frontend/gastroenterologia/gastroenterologia.jsp">Gastroenterologia</a>
+            <a href="${pageContext.request.contextPath}/frontend/cirurgia-geral/cirurgia-geral.jsp">Cirurgia Geral</a>
+            <a href="${pageContext.request.contextPath}/frontend/ortopedia/ortopedia.jsp">Ortopedia</a>
+            <a href="${pageContext.request.contextPath}/frontend/dermatologia/dermatologia.jsp">Dermatologia</a>
         </div>
         <div class="linha">
             <div class="elementos">
@@ -92,18 +94,18 @@
             </div>
             <div class="footer-colunas">
                 <h3>Serviços</h3>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar consulta</a>
-                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.html">Agendar exame</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar consulta</a>
+                <a href="${pageContext.request.contextPath}/frontend/agendamento/agendamento.jsp">Agendar exame</a>
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
                 <a href="${pageContext.request.contextPath}/login">Login</a>
-                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.html">Resultado de exames</a>
+                <a href="${pageContext.request.contextPath}/frontend/resulExames/resulExames.jsp">Resultado de exames</a>
             </div>
             <div class="footer-colunas">
                 <h3>Clínica</h3>
-                <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.html">Unidades</a>
-                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.html">Sobre nós</a>
+                <a href="${pageContext.request.contextPath}/frontend/unidades/unidades.jsp">Unidades</a>
+                <a href="${pageContext.request.contextPath}/frontend/sobre-nós/sobre-nós.jsp">Sobre nós</a>
             </div>
             <div class="footer-colunas">
                 <h3>Fale Conosco</h3>
@@ -125,7 +127,7 @@
         </div>
     </footer>
 
-    <script src="${pageContext.request.contextPath}frontend/inicial/inicialADM.js"></script>
+    <script src="${pageContext.request.contextPath}frontend/inicialADM/inicialADM.js"></script>
     <script src="${pageContext.request.contextPath}/frontend/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 

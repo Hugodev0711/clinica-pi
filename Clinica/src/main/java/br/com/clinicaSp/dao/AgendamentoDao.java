@@ -81,7 +81,7 @@ public class AgendamentoDao {
                 String cnpj = rSet.getString("cnpj");
                 String nomeUnidade = rSet.getString("nome");
                 String cep = rSet.getString("cep");
-                int numero = rSet.getInt("numero");
+                String  numero = rSet.getString("numero");
 
                 Unidade unidade = new Unidade(idUnidade, cnpj, nomeUnidade, cep, numero);
 

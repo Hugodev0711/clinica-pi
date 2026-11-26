@@ -38,7 +38,7 @@ public class FuncionarioDao {
     }
 
     public List<Funcionario> listarFuncionario(){
-        String sql = "SELECT * FROM funcionario INNER JOIN usuario ON funcionario.usuario = usuario.id_usuario";
+        String sql = "SELECT * FROM funcionario INNER JOIN usuario ON funcionario.id_usuario = usuario.id_usuario";
 
         try{
             Connection con = ConnectionPoolConfig.getConnection();
@@ -56,7 +56,7 @@ public class FuncionarioDao {
                 TipoUsuario tipoUsuario = TipoUsuario.valueOf(rSet.getString("tipo_usuario"));
                 String telefone = rSet.getString("telefone");
 
-                Usuario usuario = new Usuario(id_usuario, nome, cpf, dataNascimento, email, senha, tipoUsuario, telefone);
+                Usuario usuario = new Usuario( id_usuario, cpf, nome, dataNascimento, email, senha, tipoUsuario, telefone);
 
                 String idFuncionario = rSet.getString("id_funcionario");
                 String especialidade = rSet.getString("especialidade");

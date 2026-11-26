@@ -21,7 +21,7 @@ public class CreateAgendamentoServlet extends HttpServlet {
             LocalDate data = LocalDate.parse(req.getParameter("dataAgendamento"));
             LocalTime hora = LocalTime.parse(req.getParameter("horaAgendamento"));
             StatusAgendamento status = StatusAgendamento.valueOf(req.getParameter("status"));
-            Unidade un = new Unidade(req.getParameter("idUnidade"), null, null, null, 0);
+            Unidade un = new Unidade(req.getParameter("idUnidade"), null, null, null, null);
             Procedimento p = new Procedimento(req.getParameter("idProcedimento"), null, null, 0.0, null, null);
             Cliente c = new Cliente(req.getParameter("idCliente"), null);
             Funcionario f = new Funcionario(req.getParameter("idFuncionario"), null, null, null, 0.0);

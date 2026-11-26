@@ -23,7 +23,7 @@ public class UnidadeDao {
             stmt.setString(1, unidade.getCnpj());
             stmt.setString(2, unidade.getNome());
             stmt.setString(3, unidade.getCep());
-            stmt.setInt(4, unidade.getNumero());
+            stmt.setString(4, unidade.getNumero());
 
             stmt.execute();
 
@@ -52,7 +52,7 @@ public class UnidadeDao {
                 String cnpj = rSet.getString("cnpj");
                 String nome = rSet.getString("nome");
                 String cep = rSet.getString("cep");
-                int numero = rSet.getInt("numero");
+                String numero = rSet.getString("numero");
 
                 Unidade unidade = new Unidade(idUnidade, cnpj, nome, cep, numero);
 
