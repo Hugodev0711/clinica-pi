@@ -15,6 +15,6 @@ public class DeleteUnidadeServlet extends HttpServlet {
 
         new UnidadeDao().deletarUnidade(id);
 
-        resp.sendRedirect("listar-unidade");
+        resp.sendRedirect("listar-unidades");
     }
 }

@@ -70,7 +70,7 @@
         </label>
 
         <button type="submit" class="botao botao-principal">Cadastrar</button>
-        <a href="${pageContext.request.contextPath}//login" class="botao botao-secundario">Já tenho conta</a>
+        <a href="${pageContext.request.contextPath}/login" class="botao botao-secundario">Já tenho conta</a>
       </form>
     </section>
   </main>

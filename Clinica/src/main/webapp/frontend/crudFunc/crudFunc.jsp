@@ -24,7 +24,7 @@
     <div class="layout">
         <aside class="barra-lateral">
             <nav class="barra">
-                <a href="${pageContext.request.contextPath}/frontend/crudFunc/crudFunc.jsp" class="selecionado">
+                <a href="${pageContext.request.contextPath}/listar-funcionarios">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/funcionarios.svg" alt="Funcionários">
                     <span>Funcionários</span>
                 </a>
@@ -34,12 +34,12 @@
                     <span>Procedimentos</span>
                 </a>
 
-                <a href="${pageContext.request.contextPath}/frontend/crudUnid/crudUnid.jsp">
+                <a href="${pageContext.request.contextPath}/listar-unidades">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/unidades.svg" alt="Unidades">
                     <span>Unidades</span>
                 </a>
 
-                <a href="${pageContext.request.contextPath}/frontend/crudAgend/crudAgend.jsp">
+                <a href="${pageContext.request.contextPath}/listar-agendamentos">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/agendamentos.svg" alt="Agendamentos">
                     <span>Agendamentos</span>
                 </a>

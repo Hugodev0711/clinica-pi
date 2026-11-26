@@ -17,7 +17,7 @@ public class ListAgendamentoServlet extends HttpServlet {
         req.setAttribute("procedimentos", new ProcedimentoDao().listarProcedimentos());
         req.setAttribute("clientes", new ClienteDao().listarClientes());
         req.setAttribute("funcionarios", new FuncionarioDao().listarFuncionario());
-        req.setAttribute("statuses", StatusAgendamento.values());
-        req.getRequestDispatcher("/agendamentos.jsp").forward(req, resp);
+        req.setAttribute("statusDisponiveis", StatusAgendamento.values());
+        req.getRequestDispatcher("/frontend/crudAgend/crudAgend.jsp").forward(req, resp);
     }
 }

@@ -1,7 +1,7 @@
 
 const URL_LISTAR = contextPath + "/listar-unidades";
 const URL_CADASTRAR = contextPath + "/create-unidade";
-const URL_EXCLUIR = contextPath + "/delete-unidade";
+const URL_EXCLUIR = contextPath + "/deletar-unidade";
 
 let colunaAtual = "";
 

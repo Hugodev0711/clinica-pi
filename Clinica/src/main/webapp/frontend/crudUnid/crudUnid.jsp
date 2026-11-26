@@ -25,7 +25,7 @@
         <aside class="barra-lateral">
             <nav class="barra">
                 <a href="${pageContext.request.contextPath}/listar-funcionarios">
-                    <img src="${pageContext.request.contextPath}/frontend/imagens/funcionários.svg" alt="Funcionários">
+                    <img src="${pageContext.request.contextPath}/frontend/imagens/funcionarios.svg" alt="Funcionários">
                     <span>Funcionários</span>
                 </a>
 
@@ -39,7 +39,7 @@
                     <span>Unidades</span>
                 </a>
 
-                <a href="${pageContext.request.contextPath}/frontend/crudAgend/crudAgend.jsp">
+                <a href="${pageContext.request.contextPath}/listar-agendamentos">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/agendamentos.svg" alt="Agendamentos">
                     <span>Agendamentos</span>
                 </a>
@@ -54,7 +54,6 @@
             </button>
 
             <div class="tabela-unidades">
-<<<<<<< HEAD
                 <table>
                     <thead>
                         <tr>
@@ -123,25 +122,6 @@
                     id="pesquisa-filtro"
                     placeholder="Pesquisar..."
                     onkeyup="mostrarOpcoes()">
-=======
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID <button onclick="abrirFiltro('id', this)">▼</button></th>
-                        <th>Nome <button onclick="abrirFiltro('nome', this)">▼</button></th>
-                        <th>Endereço <button onclick="abrirFiltro('endereco', this)">▼</button></th>
-                        <th>CEP <button onclick="abrirFiltro('telefone', this)">▼</button></th>
-                        <th>CNPJ <button onclick="abrirFiltro('horario', this)">▼</button></th>
-                        <th>Status <button onclick="abrirFiltro('status', this)">▼</button></th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="tabela-unidades"></tbody>
-            </table>
-            </div>
-            
-            <div id="caixa-filtro" class ="caixa-filtro">
->>>>>>> 81216e6ba51edeade681cb7f09b1399be11d0f7c
 
                 <div id="opcoes-filtro"></div>
 

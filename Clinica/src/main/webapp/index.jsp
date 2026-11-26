@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="topo">
-    <a href="../login/login.html" class="topo_voltar"><img class="seta" src="${pageContext.request.contextPath}../imagens/seta.svg" alt="Seta">Voltar para o site</a>
+    <a href="${pageContext.request.contextPath}/login" class="topo_voltar"><img class="seta" src="${pageContext.request.contextPath}../imagens/seta.svg" alt="Seta">Voltar para o site</a>
     <img src="${pageContext.request.contextPath}../imagens/logo.novo.png" alt="Clínica SP" class="topo_logo">
     <div class="topo_cadeado">
       <img class="cadeado" src="${pageContext.request.contextPath}../imagens/cadeado.svg" alt=\"Cadeado">
@@ -69,7 +69,7 @@
         </label>
 
         <button type="submit" class="botao botao-principal">Cadastrar</button>
-        <a href="../login/login.html" class="botao botao-secundario">Já tenho conta</a>
+        <a href="${pageContext.request.contextPath}/login" class="botao botao-secundario">Já tenho conta</a>
       </form>
     </section>
   </main>
@@ -85,7 +85,7 @@
             </div>
             <div class="footer-colunas">
                 <h3>Pacientes</h3>
-                <a href="../login/login.html">Login</a>
+                <a href="${pageContext.request.contextPath}/login">Login</a>
                 <a href="../resulExames/resulExames.html">Resultado de exames</a>
             </div>
             <div class="footer-colunas">

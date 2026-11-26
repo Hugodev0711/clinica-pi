@@ -22,7 +22,7 @@
 
         <aside class="barra-lateral">
             <nav class="barra">
-                <a href="${pageContext.request.contextPath}/frontend/crudFunc/crudFunc.jsp">
+                <a href="${pageContext.request.contextPath}/listar-funcionarios">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/funcionarios.svg" alt="Funcionários">
                     <span>Funcionários</span>
                 </a>
@@ -30,11 +30,11 @@
                     <img src="${pageContext.request.contextPath}/frontend/imagens/procedimentos.svg" alt="Procedimentos">
                     <span>Procedimentos</span>
                 </a>
-                <a href="${pageContext.request.contextPath}/frontend/crudUnid/crudUnid.jsp">
+                <a href=<a href="${pageContext.request.contextPath}/listar-unidades">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/unidades.svg" alt="Unidades">
                     <span>Unidades</span>
                 </a>
-                <a href="${pageContext.request.contextPath}/frontend/crudAgend/crudAgend.jsp" class="selecionado">
+                <a href="${pageContext.request.contextPath}/listar-agendamentos" class="selecionado">
                     <img src="${pageContext.request.contextPath}/frontend/imagens/agendamentos.svg" alt="Agendamentos">
                     <span>Agendamentos</span>
                 </a>

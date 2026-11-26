@@ -1,291 +1,135 @@
-let agendamentos = [
-    {
-        id: 1,
-        paciente: "Cauan Lima",
-        data: "25/10/2026",
-        hora: "09:00",
-        profissional: "Dra. Maria",
-        status: "Agendado"
-    },
-    {
-        id: 2,
-        paciente: "Hugo Costa",
-        data: "25/12/2026",
-        hora: "15:00",
-        profissional: "Dr. carlos",
-        status: "Confirmado"
-    }
-];
+let formAgendamento = document.getElementById("form-agendamento");
+let tituloAgendamento = document.getElementById("titulo-form-agendamento");
+let linhas = document.querySelectorAll("#tabela-agendamentos .linha-agendamento");
 
-let proximoId = 3;
+let caixaFiltro = document.getElementById("caixa-filtro");
+let pesquisaFiltro = document.getElementById("pesquisa-filtro");
+let opcoesFiltro = document.getElementById("opcoes-filtro");
+
+let colunas = {
+    paciente: 0,
+    data: 1,
+    hora: 2,
+    profissional: 3,
+    status: 4
+};
 
 let colunaAtual = "";
-let filtros = {
-    id: null,
-    paciente: null,
-    data: null,
-    hora: null,
-    profissional: null,
-    status: null
+let filtros = {};
+
+function adicionarAgendamento() {
+    formAgendamento.reset();
+    formAgendamento.elements.idAgendamento.value = "";
+    tituloAgendamento.textContent = "Adicionar Agendamento";
+    formAgendamento.hidden = false;
+}
+
+function editarAgendamento(botao) {
+    adicionarAgendamento();
+
+    let campos = formAgendamento.elements;
+    let dados = botao.dataset;
+
+    campos.idAgendamento.value = dados.id;
+    campos.idCliente.value = dados.cliente;
+    campos.idFuncionario.value = dados.funcionario;
+    campos.idUnidade.value = dados.unidade;
+    campos.idProcedimento.value = dados.procedimento;
+    campos.dataAgendamento.value = dados.data;
+    campos.horaAgendamento.value = dados.hora;
+    campos.status.value = dados.status;
+
+    tituloAgendamento.textContent = "Editar Agendamento";
+}
+
+function fecharFormularioAgendamento() {
+    formAgendamento.hidden = true;
 }
 
 function listarAgendamentos() {
+    let pesquisa = document.getElementById("pesquisa").value.trim().toLowerCase();
 
-    let tabela = document.getElementById("tabela-agendamentos");
-    let pesquisa = document.getElementById("pesquisa").value.toLowerCase();
+    linhas.forEach(function (linha) {
+        let corresponde = linha.cells[colunas.paciente].textContent
+            .toLowerCase().includes(pesquisa);
 
-    tabela.innerHTML = "";
+        for (let coluna in filtros) {
+            let valor = linha.cells[colunas[coluna]].textContent.trim();
 
-    for(let i = 0; i < agendamentos.length; i++) {
-
-        let agendamento = agendamentos[i];
-
-        let correspondePesquisa = agendamento.paciente.toLowerCase().includes(pesquisa);
-
-        let correspondeFiltros = true;
-
-        for(let coluna in filtros) {
-
-            if(filtros[coluna] != null) {
-
-                let valor = String(agendamento[coluna]);
-
-                if(!filtros[coluna].includes(valor)) {
-                    correspondeFiltros = false;
-                }
+            if (!filtros[coluna].includes(valor)) {
+                corresponde = false;
             }
         }
 
-        if(correspondePesquisa && correspondeFiltros) {
-
-            let linha = tabela.insertRow();
-
-            linha.insertCell().textContent = agendamento.paciente;
-            linha.insertCell().textContent = agendamento.data;
-            linha.insertCell().textContent = agendamento.hora;
-            linha.insertCell().textContent = agendamento.profissional;
-            linha.insertCell().textContent = agendamento.status;
-
-            let acoes = linha.insertCell();
-
-            let editar = document.createElement("button");
-            editar.textContent = "Editar";
-
-            editar.onclick = function() {
-                editarAgendamento(agendamento.id);
-            };
-
-            let excluir = document.createElement("button");
-            excluir.textContent = "Excluir";
-
-            excluir.onclick = function() {
-                excluirAgendamento(agendamento.id);
-            };
-
-            acoes.appendChild(editar);
-            acoes.appendChild(excluir);
-        }
-    }
-}
-
-
-function adicionarAgendamento() {
-
-    let paciente = prompt("Nome do paciente:");
-    if(paciente == null || paciente.trim() == "") {
-        return;
-    }
-
-    let data = prompt("Data do agendamento:");
-    if(data == null || data.trim() == "") {
-        return;
-    }
-
-    let hora = prompt("Horario do agendamento:");
-    if(hora == null || hora.trim() == "") {
-        return;
-    }
-
-    let profissional = prompt("Profissional:");
-    if(profissional == null || profissional.trim() == "") {
-        return;
-    }
-
-    let status = prompt("Status:");
-    if(status == null || status.trim() == "") {
-        return;
-    }
-
-    let novoAgendamento = {
-        id: proximoId,
-        paciente: paciente,
-        data: data,
-        hora: hora,
-        profissional: profissional,
-        status: status
-    };
-
-    agendamentos.push(novoAgendamento);
-    proximoId++;
-
-    listarAgendamentos();
-
-}
-
-
-function editarAgendamento(id) {
-
-    for(let i = 0; i < agendamentos.length; i++) {
-        if(agendamentos[i].id == id) {
-
-            let paciente = prompt("Novo paciente:", agendamentos[i].paciente);
-            if(paciente == null || paciente.trim() == "") {
-                return;
-            }
-
-            let data = prompt("Nova data:", agendamentos[i].data);
-            if(data == null || data.trim() == "") {
-                return;
-            }
-
-            let hora = prompt("Novo horario:", agendamentos[i].hora);
-            if(hora == null || hora.trim() == "") {
-                return;
-            }
-
-            let profissional = prompt("Novo profissional:", agendamentos[i].profissional);
-            if(profissional == null || profissional.trim() == "") {
-                return;
-            }
-
-            let status = prompt("Novo status:", agendamentos[i].status);
-            if(status == null || status.trim() == "") {
-                return;
-            }
-
-            agendamentos[i].paciente = paciente;
-            agendamentos[i].data = data;
-            agendamentos[i].hora = hora;
-            agendamentos[i].profissional = profissional;
-            agendamentos[i].status = status;
-
-            listarAgendamentos();
-            return;
-        }
-    }
-}
-
-function excluirAgendamento(id) {
-
-    let confirmar = confirm("Deseja excluir este agendamento?");
-
-    if(confirmar == false) {
-        return;
-    }
-
-    for(let i = 0; i < agendamentos.length; i++) {
-        if(agendamentos[i].id == id) {
-            agendamentos.splice(i, 1);
-            listarAgendamentos();
-            return;
-        }
-
-    }
-
+        linha.hidden = !corresponde;
+    });
 }
 
 function abrirFiltro(coluna, botao) {
-
     colunaAtual = coluna;
-
-    let caixa = document.getElementById("caixa-filtro");
-    let titulo = document.getElementById("titulo-filtro");
-    let pesquisa = document.getElementById("pesquisa-filtro");
-    let opcoes = document.getElementById("opcoes-filtro");
-
-    caixa.style.display = "block";
-    let posicao = botao.getBoundingClientRect();
-    caixa.style.top = posicao.bottom + 5 + "px";
-    caixa.style.left = Math.max(5, Math.min(posicao.left, window.innerWidth - caixa.offsetWidth - 5)) + "px";
-
-    titulo.textContent = "Filtrar por " + coluna;
-    pesquisa.value = "";
-    opcoes.innerHTML = "";
+    pesquisaFiltro.value = "";
+    opcoesFiltro.textContent = "";
+    document.getElementById("titulo-filtro").textContent = "Filtrar por " + coluna;
 
     let valores = [];
 
-    for(let i = 0; i < agendamentos.length; i++) {
-        let valor = String(agendamentos[i][coluna]);
+    linhas.forEach(function (linha) {
+        let valor = linha.cells[colunas[coluna]].textContent.trim();
 
-        if(!valores.includes(valor)) {
+        if (!valores.includes(valor)) {
             valores.push(valor);
         }
-    }
+    });
 
-    valores.sort();
+    valores.sort().forEach(function (valor) {
+        let label = document.createElement("label");
+        label.className = "opcao-filtro";
 
-    for(let i = 0; i < valores.length; i++) {
-    let label = document.createElement("label");
-    label.className = "opcao-filtro";
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = valor;
+        checkbox.checked = !filtros[coluna] || filtros[coluna].includes(valor);
 
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = valores[i];
+        label.appendChild(checkbox);
+        label.append(" " + valor);
+        opcoesFiltro.appendChild(label);
+    });
 
-    if(filtros[coluna] == null ||
-       filtros[coluna].includes(valores[i])) {
-        checkbox.checked = true;
-    }
+    caixaFiltro.style.display = "block";
 
-    label.appendChild(checkbox);
-    label.append(" " + valores[i]);
-
-    opcoes.appendChild(label);
-    }
+    let posicao = botao.getBoundingClientRect();
+    caixaFiltro.style.top = posicao.bottom + 5 + "px";
+    caixaFiltro.style.left = Math.max(
+        5, Math.min(posicao.left, window.innerWidth - caixaFiltro.offsetWidth - 5)
+    ) + "px";
 }
 
 function mostrarOpcoes() {
+    let pesquisa = pesquisaFiltro.value.trim().toLowerCase();
 
-    let pesquisa = document.getElementById("pesquisa-filtro").value.toLowerCase();
-    let opcoes = document.querySelectorAll(".opcao-filtro");
-
-    for(let i = 0; i < opcoes.length; i++) {
-        let texto = opcoes[i].textContent.toLowerCase();
-
-        if(texto.includes(pesquisa)) {
-            opcoes[i].style.display = "block";
-        }
-        else {
-            opcoes[i].style.display = "none"
-        }
-    }
+    opcoesFiltro.querySelectorAll(".opcao-filtro").forEach(function (opcao) {
+        opcao.hidden = !opcao.textContent.toLowerCase().includes(pesquisa);
+    });
 }
 
 function aplicarFiltro() {
-
-    let checkboxes = document.querySelectorAll("#opcoes-filtro input[type='checkbox']");
     let selecionados = [];
 
-    for(let i = 0; i < checkboxes.length; i++) {
-        if(checkboxes[i].checked) {
-            selecionados.push(checkboxes[i].value);
-        }
-    }
+    opcoesFiltro.querySelectorAll("input:checked").forEach(function (checkbox) {
+        selecionados.push(checkbox.value);
+    });
 
     filtros[colunaAtual] = selecionados;
     listarAgendamentos();
     fecharFiltro();
-
 }
 
 function limparFiltro() {
-    filtros[colunaAtual] = null;
+    delete filtros[colunaAtual];
     listarAgendamentos();
     fecharFiltro();
 }
 
 function fecharFiltro() {
-    document.getElementById("caixa-filtro").style.display = "none";
+    caixaFiltro.style.display = "none";
 }
-
-listarAgendamentos();
